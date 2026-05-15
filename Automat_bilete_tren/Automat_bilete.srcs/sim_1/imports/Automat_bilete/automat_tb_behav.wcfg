@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="automat_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="automat_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="792.001 ns"></ZoomEndTime>
+      <Cursor1Time time="191.445 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="269"></NameColumnWidth>
+      <ValueColumnWidth column_width="195"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="41" />
+   <wvobject fp_name="/automat_tb/D_in" type="array">
+      <obj_property name="ElementShortName">D_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">D_in[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UC/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/nxt" type="logic">
+      <obj_property name="ElementShortName">nxt</obj_property>
+      <obj_property name="ObjectShortName">nxt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/cancel" type="logic">
+      <obj_property name="ElementShortName">cancel</obj_property>
+      <obj_property name="ObjectShortName">cancel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/load" type="logic">
+      <obj_property name="ElementShortName">load</obj_property>
+      <obj_property name="ObjectShortName">load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/incarcare" type="logic">
+      <obj_property name="ElementShortName">incarcare</obj_property>
+      <obj_property name="ObjectShortName">incarcare</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UE/X1/valuta_corecta" type="logic">
+      <obj_property name="ElementShortName">valuta_corecta</obj_property>
+      <obj_property name="ObjectShortName">valuta_corecta</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UE/Distanta" type="array">
+      <obj_property name="ElementShortName">Distanta[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Distanta[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UE/Suma" type="array">
+      <obj_property name="ElementShortName">Suma[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Suma[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UE/Rest" type="array">
+      <obj_property name="ElementShortName">Rest[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Rest[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UC/Gr_Eq" type="logic">
+      <obj_property name="ElementShortName">Gr_Eq</obj_property>
+      <obj_property name="ObjectShortName">Gr_Eq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UE/X1/Bilete" type="array">
+      <obj_property name="ElementShortName">Bilete[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Bilete[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UE/X1/M1" type="array">
+      <obj_property name="ElementShortName">M1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M1[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UE/X1/M2" type="array">
+      <obj_property name="ElementShortName">M2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M2[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UE/X1/M5" type="array">
+      <obj_property name="ElementShortName">M5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M5[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UE/X1/M10" type="array">
+      <obj_property name="ElementShortName">M10[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M10[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UE/X1/M20" type="array">
+      <obj_property name="ElementShortName">M20[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M20[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UE/X1/M50" type="array">
+      <obj_property name="ElementShortName">M50[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M50[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UC/actualizare" type="logic">
+      <obj_property name="ElementShortName">actualizare</obj_property>
+      <obj_property name="ObjectShortName">actualizare</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UC/En_Scazator" type="logic">
+      <obj_property name="ElementShortName">En_Scazator</obj_property>
+      <obj_property name="ObjectShortName">En_Scazator</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UC/Scazator_gata" type="logic">
+      <obj_property name="ElementShortName">Scazator_gata</obj_property>
+      <obj_property name="ObjectShortName">Scazator_gata</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UC/En_Reg_suma_part" type="logic">
+      <obj_property name="ElementShortName">En_Reg_suma_part</obj_property>
+      <obj_property name="ObjectShortName">En_Reg_suma_part</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UC/En_verificator" type="logic">
+      <obj_property name="ElementShortName">En_verificator</obj_property>
+      <obj_property name="ObjectShortName">En_verificator</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/UC/Rest_ok" type="logic">
+      <obj_property name="ElementShortName">Rest_ok</obj_property>
+      <obj_property name="ObjectShortName">Rest_ok</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/suma_insuficienta" type="logic">
+      <obj_property name="ElementShortName">suma_insuficienta</obj_property>
+      <obj_property name="ObjectShortName">suma_insuficienta</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/rest_insuficient" type="logic">
+      <obj_property name="ElementShortName">rest_insuficient</obj_property>
+      <obj_property name="ObjectShortName">rest_insuficient</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/rest1" type="logic">
+      <obj_property name="ElementShortName">rest1</obj_property>
+      <obj_property name="ObjectShortName">rest1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/rest2" type="logic">
+      <obj_property name="ElementShortName">rest2</obj_property>
+      <obj_property name="ObjectShortName">rest2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/rest5" type="logic">
+      <obj_property name="ElementShortName">rest5</obj_property>
+      <obj_property name="ObjectShortName">rest5</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/rest10" type="logic">
+      <obj_property name="ElementShortName">rest10</obj_property>
+      <obj_property name="ObjectShortName">rest10</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/rest20" type="logic">
+      <obj_property name="ElementShortName">rest20</obj_property>
+      <obj_property name="ObjectShortName">rest20</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/rest50" type="logic">
+      <obj_property name="ElementShortName">rest50</obj_property>
+      <obj_property name="ObjectShortName">rest50</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/bilet" type="logic">
+      <obj_property name="ElementShortName">bilet</obj_property>
+      <obj_property name="ObjectShortName">bilet</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/Enable_mare" type="logic">
+      <obj_property name="ElementShortName">Enable_mare</obj_property>
+      <obj_property name="ObjectShortName">Enable_mare</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/Big_reset" type="logic">
+      <obj_property name="ElementShortName">Big_reset</obj_property>
+      <obj_property name="ObjectShortName">Big_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/C1/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/zero_bilete" type="logic">
+      <obj_property name="ElementShortName">zero_bilete</obj_property>
+      <obj_property name="ObjectShortName">zero_bilete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/gata" type="logic">
+      <obj_property name="ElementShortName">gata</obj_property>
+      <obj_property name="ObjectShortName">gata</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/anozi" type="array">
+      <obj_property name="ElementShortName">anozi[7:0]</obj_property>
+      <obj_property name="ObjectShortName">anozi[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/automat_tb/catozi" type="array">
+      <obj_property name="ElementShortName">catozi[6:0]</obj_property>
+      <obj_property name="ObjectShortName">catozi[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
