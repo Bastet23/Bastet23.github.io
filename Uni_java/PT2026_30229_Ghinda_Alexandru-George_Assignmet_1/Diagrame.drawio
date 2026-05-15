@@ -1,0 +1,676 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.6">
+  <diagram id="Czve7oSOi1QDOXU_KW1O" name="Page-1">
+    <mxGraphModel dx="7265" dy="4320" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="400" pageHeight="500" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node3" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;App&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ main(String[]): void&lt;/p&gt;" vertex="1">
+          <mxGeometry height="68" width="166" x="-79" y="2527" as="geometry" />
+        </mxCell>
+        <mxCell id="node2" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;AssignPanel&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- unassignBtn: JButton&lt;br/&gt;- empTaskTree: JTree&lt;br/&gt;- empRootNode: DefaultMutableTreeNode&lt;br/&gt;- updateStatusBtn: JButton&lt;br/&gt;- unassignedTaskCombo: JComboBox&amp;lt;Task&amp;gt;&lt;br/&gt;- empTreeModel: DefaultTreeModel&lt;br/&gt;- assignBtn: JButton&lt;br/&gt;- empCombo: JComboBox&amp;lt;Employee&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getUnassignedTaskCombo(): JComboBox&amp;lt;Task&amp;gt;&lt;br/&gt;+ getEmpRootNode(): DefaultMutableTreeNode&lt;br/&gt;+ getUnassignBtn(): JButton&lt;br/&gt;+ getEmpTaskTree(): JTree&lt;br/&gt;+ getAssignBtn(): JButton&lt;br/&gt;+ getUpdateStatusBtn(): JButton&lt;br/&gt;+ getEmpCombo(): JComboBox&amp;lt;Employee&amp;gt;&lt;br/&gt;+ getEmpTreeModel(): DefaultTreeModel&lt;/p&gt;" vertex="1">
+          <mxGeometry height="424" width="354" x="307" y="-14" as="geometry" />
+        </mxCell>
+        <mxCell id="node10" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ComplexTask&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- serialVersionUID: long&lt;br/&gt;~ tasks: ArrayList&amp;lt;Task&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getTask(int): Task&lt;br/&gt;+ removeTask(int): void&lt;br/&gt;+ getTasks(): ArrayList&amp;lt;Task&amp;gt;&lt;br/&gt;+ addTask(Task): void&lt;br/&gt;+ toString(): String&lt;br/&gt;+ setTasks(ArrayList&amp;lt;Task&amp;gt;): void&lt;br/&gt;+ estimateDuration(): int&lt;/p&gt;" vertex="1">
+          <mxGeometry height="256" width="249" x="1400" y="1690" as="geometry" />
+        </mxCell>
+        <mxCell id="node5" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Controller&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- view: MainFrame&lt;br/&gt;- manager: TaskManagement&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- initController(): void&lt;br/&gt;- refreshTaskLists(): void&lt;br/&gt;- expandAllNodes(JTree): void&lt;br/&gt;- refreshEmployeeTasksList(): void&lt;br/&gt;- refreshEmployeeList(): void&lt;br/&gt;- createTreeNode(Task): DefaultMutableTreeNode&lt;/p&gt;" vertex="1">
+          <mxGeometry height="232" width="348" x="510" y="2202" as="geometry" />
+        </mxCell>
+        <mxCell id="node9" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DataLayer&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- isLoaded: boolean&lt;br/&gt;- FNAME: String&lt;br/&gt;- tempMap: Map&amp;lt;Employee, List&amp;lt;Task&amp;gt;&amp;gt;&lt;br/&gt;- tempTasks: List&amp;lt;Task&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ loadTemp(): void&lt;br/&gt;+ save(Map&amp;lt;Employee, List&amp;lt;Task&amp;gt;&amp;gt;, List&amp;lt;Task&amp;gt;): void&lt;br/&gt;+ loadTasks(): List&amp;lt;Task&amp;gt;&lt;br/&gt;+ loadEmp(): Map&amp;lt;Employee, List&amp;lt;Task&amp;gt;&amp;gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="232" width="381" x="674" y="1702" as="geometry" />
+        </mxCell>
+        <mxCell id="node4" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Employee&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- idEmployee: int&lt;br/&gt;- name: String&lt;br/&gt;- serialVersionUID: long&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getName(): String&lt;br/&gt;+ getIdEmployee(): int&lt;br/&gt;+ toString(): String&lt;br/&gt;+ setName(String): void&lt;br/&gt;+ setIdEmployee(int): void&lt;br/&gt;+ equals(Object): boolean&lt;br/&gt;+ hashCode(): int&lt;/p&gt;" vertex="1">
+          <mxGeometry height="280" width="196" x="1306" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="node7" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;EmployeePanel&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- deleteBtn: JButton&lt;br/&gt;- nameField: JTextField&lt;br/&gt;- addBtn: JButton&lt;br/&gt;- employeeList: JList&amp;lt;Employee&amp;gt;&lt;br/&gt;- idField: JTextField&lt;br/&gt;- listModel: DefaultListModel&amp;lt;Employee&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getListModel(): DefaultListModel&amp;lt;Employee&amp;gt;&lt;br/&gt;+ getNameField(): JTextField&lt;br/&gt;+ getDeleteBtn(): JButton&lt;br/&gt;+ getEmployeeList(): JList&amp;lt;Employee&amp;gt;&lt;br/&gt;+ getIdField(): JTextField&lt;br/&gt;- addGridComponent(JPanel, Component, GridBagConstraints, int, int, int): void&lt;br/&gt;+ getAddBtn(): JButton&lt;/p&gt;" vertex="1">
+          <mxGeometry height="352" width="449" x="-80" y="602" as="geometry" />
+        </mxCell>
+        <mxCell id="node13" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;MainFrame&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- assignBtn: JButton&lt;br/&gt;- taskPanel: TaskPanel&lt;br/&gt;- empPanel: EmployeePanel&lt;br/&gt;- utilityPanel: UtilityPanel&lt;br/&gt;- cardLayout: CardLayout&lt;br/&gt;- taskBtn: JButton&lt;br/&gt;- assignPanel: AssignPanel&lt;br/&gt;- utilityBtn: JButton&lt;br/&gt;- homeBtn: JButton&lt;br/&gt;- empBtn: JButton&lt;br/&gt;- cardPanel: JPanel&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getAssignBtn(): JButton&lt;br/&gt;+ getUtilityPanel(): UtilityPanel&lt;br/&gt;+ getHomeBtn(): JButton&lt;br/&gt;+ getTaskPanel(): TaskPanel&lt;br/&gt;+ switchPanel(String): void&lt;br/&gt;- createSidebar(): JPanel&lt;br/&gt;- createHomePage(): JPanel&lt;br/&gt;+ getTaskBtn(): JButton&lt;br/&gt;+ getAssignPanel(): AssignPanel&lt;br/&gt;+ getEmpBtn(): JButton&lt;br/&gt;+ getUtilityBtn(): JButton&lt;br/&gt;+ getEmpPanel(): EmployeePanel&lt;/p&gt;" vertex="1">
+          <mxGeometry height="592" width="238" x="-95" y="1522" as="geometry" />
+        </mxCell>
+        <mxCell id="node12" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SimpleTask&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- endHour: int&lt;br/&gt;- serialVersionUID: long&lt;br/&gt;- startHour: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ estimateDuration(): int&lt;br/&gt;+ getEndHour(): int&lt;br/&gt;+ getStartHour(): int&lt;br/&gt;+ setStartHour(int): void&lt;br/&gt;+ setEndHour(int): void&lt;br/&gt;+ toString(): String&lt;/p&gt;" vertex="1">
+          <mxGeometry height="256" width="184" x="1612" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="node11" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Task&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- idTask: int&lt;br/&gt;- statusTask: String&lt;br/&gt;- serialVersionUID: long&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getStatusTask(): String&lt;br/&gt;+ toString(): String&lt;br/&gt;+ setStatusTask(String): void&lt;br/&gt;+ getIdTask(): int&lt;br/&gt;+ setIdTask(int): void&lt;br/&gt;+ estimateDuration(): int&lt;/p&gt;" vertex="1">
+          <mxGeometry height="256" width="213" x="1478" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="node0" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TaskManagement&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- serialVersionUID: long&lt;br/&gt;~ assignations: Map&amp;lt;Employee, List&amp;lt;Task&amp;gt;&amp;gt;&lt;br/&gt;- unassignedTasks: List&amp;lt;Task&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ removeTask(Task): void&lt;br/&gt;+ addTask(Task): void&lt;br/&gt;+ removeTaskFromEmployee(int, Task): void&lt;br/&gt;+ addEmployee(Employee): void&lt;br/&gt;+ assignTaskToEmployee(int, Task): void&lt;br/&gt;+ getUnassignedTasks(): List&amp;lt;Task&amp;gt;&lt;br/&gt;+ removeEmployee(Employee): void&lt;br/&gt;+ loadTasks(): void&lt;br/&gt;+ modifyTaskStatus(int, int): void&lt;br/&gt;+ saveWork(): void&lt;br/&gt;+ addTaskToComplex(ComplexTask, Task): void&lt;br/&gt;+ getAssignations(): Map&amp;lt;Employee, List&amp;lt;Task&amp;gt;&amp;gt;&lt;br/&gt;+ setAssignations(Map&amp;lt;Employee, List&amp;lt;Task&amp;gt;&amp;gt;): void&lt;br/&gt;+ calculateEmployeeWorkDuration(int): int&lt;br/&gt;+ loadEmps(): void&lt;br/&gt;+ removeTaskFromTree(List&amp;lt;Task&amp;gt;, Task): boolean&lt;/p&gt;" vertex="1">
+          <mxGeometry height="496" width="371" x="199" y="1570" as="geometry" />
+        </mxCell>
+        <mxCell id="node8" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TaskPanel&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- createBtn: JButton&lt;br/&gt;- startTimeField: JTextField&lt;br/&gt;- typeCombo: JComboBox&amp;lt;String&amp;gt;&lt;br/&gt;- endTimeField: JTextField&lt;br/&gt;- complexCombo: JComboBox&amp;lt;Task&amp;gt;&lt;br/&gt;- deleteBtn: JButton&lt;br/&gt;- rootNode: DefaultMutableTreeNode&lt;br/&gt;- subTaskCombo: JComboBox&amp;lt;Task&amp;gt;&lt;br/&gt;- linkBtn: JButton&lt;br/&gt;- idField: JTextField&lt;br/&gt;- treeModel: DefaultTreeModel&lt;br/&gt;- statusCombo: JComboBox&amp;lt;String&amp;gt;&lt;br/&gt;- taskTree: JTree&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- addGridComponent(JPanel, Component, GridBagConstraints, int, int, int): void&lt;br/&gt;+ getEndTimeField(): JTextField&lt;br/&gt;+ getTreeModel(): DefaultTreeModel&lt;br/&gt;+ getIdField(): JTextField&lt;br/&gt;+ getCreateBtn(): JButton&lt;br/&gt;+ getDeleteBtn(): JButton&lt;br/&gt;+ getSubTaskCombo(): JComboBox&amp;lt;Task&amp;gt;&lt;br/&gt;+ getTaskTree(): JTree&lt;br/&gt;+ getTypeCombo(): JComboBox&amp;lt;String&amp;gt;&lt;br/&gt;+ getLinkBtn(): JButton&lt;br/&gt;+ getStartTimeField(): JTextField&lt;br/&gt;+ getRootNode(): DefaultMutableTreeNode&lt;br/&gt;+ getStatusCombo(): JComboBox&amp;lt;String&amp;gt;&lt;br/&gt;+ getComplexCombo(): JComboBox&amp;lt;Task&amp;gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="688" width="449" x="700" y="434" as="geometry" />
+        </mxCell>
+        <mxCell id="node6" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Utility&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- countTasksRec(Task, HashMap&amp;lt;String, Integer&amp;gt;): void&lt;br/&gt;+ computeTasks(TaskManagement): HashMap&amp;lt;String, HashMap&amp;lt;String, Integer&amp;gt;&amp;gt;&lt;br/&gt;+ filterEmployees(TaskManagement): List&amp;lt;Employee&amp;gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="120" width="546" x="891" y="1303" as="geometry" />
+        </mxCell>
+        <mxCell id="node1" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;UtilityPanel&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- btnOver40: JButton&lt;br/&gt;- textArea: JTextArea&lt;br/&gt;- btnStatusReport: JButton&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getBtnOver40(): JButton&lt;br/&gt;+ getBtnStatusReport(): JButton&lt;br/&gt;+ getTextArea(): JTextArea&lt;/p&gt;" vertex="1">
+          <mxGeometry height="184" width="231" x="1109" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" edge="1" parent="1" source="node3" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=0.000;entryDx=0;entryDy=0;" target="node5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="4" y="2498" />
+              <mxPoint x="884" y="2498" />
+              <mxPoint x="884" y="2158" />
+              <mxPoint x="771" y="2158" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label74" connectable="0" parent="edge12" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="«create»" vertex="1">
+          <mxGeometry x="833" y="2431" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" edge="1" parent="1" source="node3" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=0.000;entryDx=0;entryDy=0;" target="node13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="4" y="2298" />
+              <mxPoint x="-116" y="2298" />
+              <mxPoint x="-116" y="1498" />
+              <mxPoint x="-35" y="1498" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label62" connectable="0" parent="edge10" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="«create»" vertex="1">
+          <mxGeometry x="-167" y="1888" as="geometry" />
+        </mxCell>
+        <mxCell id="edge18" edge="1" parent="1" source="node3" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" target="node0" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="4" y="2498" />
+              <mxPoint x="384" y="2498" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label110" connectable="0" parent="edge18" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="«create»" vertex="1">
+          <mxGeometry x="169" y="2478" as="geometry" />
+        </mxCell>
+        <mxCell id="edge0" edge="1" parent="1" source="node10" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#000082;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" target="node11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1586" y="1198" />
+              <mxPoint x="1644" y="1198" />
+              <mxPoint x="1644" y="358" />
+              <mxPoint x="1637" y="358" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="node10" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.250;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" target="node11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1462" y="1658" />
+              <mxPoint x="1464" y="1658" />
+              <mxPoint x="1464" y="938" />
+              <mxPoint x="1531" y="938" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label24" connectable="0" parent="edge4" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="1451" y="1664" as="geometry" />
+        </mxCell>
+        <mxCell id="label28" connectable="0" parent="edge4" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="*" vertex="1">
+          <mxGeometry x="1522" y="331" as="geometry" />
+        </mxCell>
+        <mxCell id="label29" connectable="0" parent="edge4" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="tasks" vertex="1">
+          <mxGeometry x="1531" y="331" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="node5" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" target="node10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="771" y="2178" />
+              <mxPoint x="764" y="2178" />
+              <mxPoint x="764" y="1978" />
+              <mxPoint x="1524" y="1978" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label20" connectable="0" parent="edge3" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="«create»" vertex="1">
+          <mxGeometry x="713" y="2068" as="geometry" />
+        </mxCell>
+        <mxCell id="edge14" edge="1" parent="1" source="node5" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" target="node4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="771" y="2178" />
+              <mxPoint x="764" y="2178" />
+              <mxPoint x="764" y="1978" />
+              <mxPoint x="644" y="1978" />
+              <mxPoint x="644" y="1198" />
+              <mxPoint x="1355" y="1198" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label86" connectable="0" parent="edge14" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="«create»" vertex="1">
+          <mxGeometry x="679" y="1958" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="node5" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.250;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=0.000;entryDx=0;entryDy=0;" target="node13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="597" y="2178" />
+              <mxPoint x="604" y="2178" />
+              <mxPoint x="604" y="2158" />
+              <mxPoint x="164" y="2158" />
+              <mxPoint x="164" y="1498" />
+              <mxPoint x="84" y="1498" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label48" connectable="0" parent="edge8" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="489" y="2138" as="geometry" />
+        </mxCell>
+        <mxCell id="label52" connectable="0" parent="edge8" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="153" y="1818" as="geometry" />
+        </mxCell>
+        <mxCell id="label53" connectable="0" parent="edge8" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="view" vertex="1">
+          <mxGeometry x="124" y="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="node5" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" target="node12" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="771" y="2178" />
+              <mxPoint x="764" y="2178" />
+              <mxPoint x="764" y="1978" />
+              <mxPoint x="1704" y="1978" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label14" connectable="0" parent="edge2" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="«create»" vertex="1">
+          <mxGeometry x="713" y="2035" as="geometry" />
+        </mxCell>
+        <mxCell id="edge16" edge="1" parent="1" source="node5" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.250;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=0.000;entryDx=0;entryDy=0;" target="node0" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="597" y="2178" />
+              <mxPoint x="604" y="2178" />
+              <mxPoint x="604" y="1538" />
+              <mxPoint x="384" y="1538" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label96" connectable="0" parent="edge16" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="592" y="2118" as="geometry" />
+        </mxCell>
+        <mxCell id="label100" connectable="0" parent="edge16" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="452" y="1518" as="geometry" />
+        </mxCell>
+        <mxCell id="label101" connectable="0" parent="edge16" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="manager" vertex="1">
+          <mxGeometry x="604" y="2061" as="geometry" />
+        </mxCell>
+        <mxCell id="edge17" edge="1" parent="1" source="node5" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" target="node6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="771" y="2178" />
+              <mxPoint x="764" y="2178" />
+              <mxPoint x="764" y="1978" />
+              <mxPoint x="1164" y="1978" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label104" connectable="0" parent="edge17" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="«create»" vertex="1">
+          <mxGeometry x="713" y="2001" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" edge="1" parent="1" source="node9" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" target="node4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="864" y="1258" />
+              <mxPoint x="1364" y="1258" />
+              <mxPoint x="1364" y="938" />
+              <mxPoint x="1453" y="938" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label66" connectable="0" parent="edge11" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="853" y="1677" as="geometry" />
+        </mxCell>
+        <mxCell id="label70" connectable="0" parent="edge11" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="*" vertex="1">
+          <mxGeometry x="1389" y="918" as="geometry" />
+        </mxCell>
+        <mxCell id="label71" connectable="0" parent="edge11" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="tempMap" vertex="1">
+          <mxGeometry x="1364" y="1035" as="geometry" />
+        </mxCell>
+        <mxCell id="edge20" edge="1" parent="1" source="node9" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" target="node11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="864" y="1278" />
+              <mxPoint x="1464" y="1278" />
+              <mxPoint x="1464" y="938" />
+              <mxPoint x="1531" y="938" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label120" connectable="0" parent="edge20" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="853" y="1621" as="geometry" />
+        </mxCell>
+        <mxCell id="label124" connectable="0" parent="edge20" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="*" vertex="1">
+          <mxGeometry x="1522" y="418" as="geometry" />
+        </mxCell>
+        <mxCell id="label125" connectable="0" parent="edge20" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="tempTasks" vertex="1">
+          <mxGeometry x="1531" y="418" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" edge="1" parent="1" source="node13" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" target="node2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="84" y="1478" />
+              <mxPoint x="564" y="1478" />
+              <mxPoint x="564" y="1158" />
+              <mxPoint x="573" y="1158" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label78" connectable="0" parent="edge13" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="158" y="1458" as="geometry" />
+        </mxCell>
+        <mxCell id="label82" connectable="0" parent="edge13" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="562" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="label83" connectable="0" parent="edge13" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="assignPanel" vertex="1">
+          <mxGeometry x="573" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="edge15" edge="1" parent="1" source="node13" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.250;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" target="node2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-35" y="1458" />
+              <mxPoint x="404" y="1458" />
+              <mxPoint x="404" y="1178" />
+              <mxPoint x="396" y="1178" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label92" connectable="0" parent="edge15" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="«create»" vertex="1">
+          <mxGeometry x="345" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="edge19" edge="1" parent="1" source="node13" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" target="node7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="84" y="1478" />
+              <mxPoint x="564" y="1478" />
+              <mxPoint x="564" y="1158" />
+              <mxPoint x="256" y="1158" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label114" connectable="0" parent="edge19" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="302" y="1138" as="geometry" />
+        </mxCell>
+        <mxCell id="label118" connectable="0" parent="edge19" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="245" y="959" as="geometry" />
+        </mxCell>
+        <mxCell id="label119" connectable="0" parent="edge19" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="empPanel" vertex="1">
+          <mxGeometry x="256" y="959" as="geometry" />
+        </mxCell>
+        <mxCell id="edge21" edge="1" parent="1" source="node13" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.250;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" target="node7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-35" y="1458" />
+              <mxPoint x="404" y="1458" />
+              <mxPoint x="404" y="1178" />
+              <mxPoint x="32" y="1178" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label128" connectable="0" parent="edge21" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="«create»" vertex="1">
+          <mxGeometry x="353" y="1355" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="node13" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" target="node8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="84" y="1478" />
+              <mxPoint x="564" y="1478" />
+              <mxPoint x="564" y="1158" />
+              <mxPoint x="1036" y="1158" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label30" connectable="0" parent="edge5" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="73" y="1468" as="geometry" />
+        </mxCell>
+        <mxCell id="label34" connectable="0" parent="edge5" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="952" y="1138" as="geometry" />
+        </mxCell>
+        <mxCell id="label35" connectable="0" parent="edge5" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="taskPanel" vertex="1">
+          <mxGeometry x="1036" y="1127" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="node13" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.250;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" target="node8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-35" y="1458" />
+              <mxPoint x="404" y="1458" />
+              <mxPoint x="404" y="1178" />
+              <mxPoint x="812" y="1178" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label38" connectable="0" parent="edge6" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="«create»" vertex="1">
+          <mxGeometry x="353" y="1261" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="node13" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" target="node1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="84" y="1478" />
+              <mxPoint x="564" y="1478" />
+              <mxPoint x="564" y="1158" />
+              <mxPoint x="1282" y="1158" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label42" connectable="0" parent="edge7" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="398" y="1458" as="geometry" />
+        </mxCell>
+        <mxCell id="label46" connectable="0" parent="edge7" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="1271" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="label47" connectable="0" parent="edge7" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="utilityPanel" vertex="1">
+          <mxGeometry x="1282" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="node13" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.250;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" target="node1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-35" y="1458" />
+              <mxPoint x="404" y="1458" />
+              <mxPoint x="404" y="1178" />
+              <mxPoint x="1166" y="1178" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label56" connectable="0" parent="edge9" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="«create»" vertex="1">
+          <mxGeometry x="353" y="1308" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="node12" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#000082;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" target="node11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1704" y="1198" />
+              <mxPoint x="1644" y="1198" />
+              <mxPoint x="1644" y="358" />
+              <mxPoint x="1637" y="358" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge22" edge="1" parent="1" source="node0" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" target="node4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="384" y="1438" />
+              <mxPoint x="824" y="1438" />
+              <mxPoint x="824" y="1218" />
+              <mxPoint x="1364" y="1218" />
+              <mxPoint x="1364" y="938" />
+              <mxPoint x="1453" y="938" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label132" connectable="0" parent="edge22" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="489" y="1418" as="geometry" />
+        </mxCell>
+        <mxCell id="label136" connectable="0" parent="edge22" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="*" vertex="1">
+          <mxGeometry x="1426" y="918" as="geometry" />
+        </mxCell>
+        <mxCell id="label137" connectable="0" parent="edge22" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="assignations" vertex="1">
+          <mxGeometry x="1364" y="998" as="geometry" />
+        </mxCell>
+        <mxCell id="edge23" edge="1" parent="1" source="node0" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=diamondThinstartSize=12;endArrow=openThin;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" target="node11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="384" y="1438" />
+              <mxPoint x="824" y="1438" />
+              <mxPoint x="824" y="1238" />
+              <mxPoint x="1464" y="1238" />
+              <mxPoint x="1464" y="938" />
+              <mxPoint x="1531" y="938" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label138" connectable="0" parent="edge23" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="1" vertex="1">
+          <mxGeometry x="599" y="1418" as="geometry" />
+        </mxCell>
+        <mxCell id="label142" connectable="0" parent="edge23" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="*" vertex="1">
+          <mxGeometry x="1522" y="469" as="geometry" />
+        </mxCell>
+        <mxCell id="label143" connectable="0" parent="edge23" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" value="unassignedTasks" vertex="1">
+          <mxGeometry x="1531" y="469" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-1" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" value="Prezentare" vertex="1">
+          <mxGeometry height="90" width="160" x="-664.9966666666666" y="829.9989567057295" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-2" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" value="Business Logic" vertex="1">
+          <mxGeometry height="90" width="160" x="-664.9966666666666" y="949.9989567057295" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-3" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" value="Data Acc&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ess&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="160" x="-664.9966666666666" y="1069.9989567057296" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-4" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" value="Data Model" vertex="1">
+          <mxGeometry height="90" width="160" x="-424.99666666666656" y="949.9989567057295" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-5" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0;exitDx=160;exitDy=52;exitPerimeter=0;" target="JeAujxu2_EuD93IqJv6G-4" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-484.99666666666656" y="869.9989567057295" as="sourcePoint" />
+            <mxPoint x="-324.99666666666656" y="869.9989567057295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-6" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-2" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=52;entryPerimeter=0;exitX=0;exitY=0;exitDx=160;exitDy=52;exitPerimeter=0;" target="JeAujxu2_EuD93IqJv6G-4" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-504.99666666666656" y="989.9989567057295" as="sourcePoint" />
+            <mxPoint x="-424.99666666666656" y="1057.9989567057296" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-7" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-3" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=90;entryPerimeter=0;exitX=0;exitY=0;exitDx=160;exitDy=52;exitPerimeter=0;" target="JeAujxu2_EuD93IqJv6G-4" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-504.99666666666656" y="1109.9989567057296" as="sourcePoint" />
+            <mxPoint x="-424.99666666666656" y="1177.9989567057296" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-8" edge="1" parent="1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0;exitDx=160;exitDy=52;exitPerimeter=0;entryX=0.498;entryY=0.13;entryDx=0;entryDy=0;entryPerimeter=0;" target="JeAujxu2_EuD93IqJv6G-2" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-584.9966666666666" y="919.9989567057295" as="sourcePoint" />
+            <mxPoint x="-504.99666666666656" y="987.9989567057295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-9" edge="1" parent="1" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0;exitDx=160;exitDy=52;exitPerimeter=0;entryX=0.498;entryY=0.13;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-584.9966666666666" y="1039.9989567057296" as="sourcePoint" />
+            <mxPoint x="-584.9966666666666" y="1081.9989567057296" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Implementeaza&lt;div&gt;clasele de GUI&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-744.9966666666666" y="859.9989567057295" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Implementeaza logica de business" vertex="1">
+          <mxGeometry height="30" width="60" x="-744.9966666666666" y="979.9989567057295" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Implementeaza&lt;div&gt;clasa de serializare&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-744.9966666666666" y="1109.9989567057296" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Implementeaza&lt;div&gt;clasele Employee, Task, SimpleTask, ComplexTask&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="-429.99666666666656" y="909.9989567057295" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-137" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Manager" vertex="1">
+          <mxGeometry height="60" width="30" x="-880" y="1960" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-138" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-137" style="endArrow=none;html=1;rounded=0;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="JeAujxu2_EuD93IqJv6G-139" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-650" y="2110" as="sourcePoint" />
+            <mxPoint x="-820" y="1940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-139" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Create" vertex="1">
+          <mxGeometry height="50" width="90" x="-820" y="1890" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-140" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="JeAujxu2_EuD93IqJv6G-139" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-700" y="1860" as="sourcePoint" />
+            <mxPoint x="-680" y="1810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-141" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Create Simple Task" vertex="1">
+          <mxGeometry height="50" width="90" x="-700" y="1830" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-142" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Create Complex&lt;div&gt;&amp;nbsp;Task&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="100" x="-700" y="1890" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-143" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-142" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="JeAujxu2_EuD93IqJv6G-139" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-650" y="2110" as="sourcePoint" />
+            <mxPoint x="-600" y="2060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-144" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="JeAujxu2_EuD93IqJv6G-139" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-760" y="1870" as="sourcePoint" />
+            <mxPoint x="-770" y="1860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-145" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Create Employee" vertex="1">
+          <mxGeometry height="50" width="90" x="-800" y="1820" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-146" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Delete" vertex="1">
+          <mxGeometry height="50" width="90" x="-580" y="1865" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-147" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="JeAujxu2_EuD93IqJv6G-146" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-460" y="1835" as="sourcePoint" />
+            <mxPoint x="-440" y="1785" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-148" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Delete&amp;nbsp;&amp;nbsp;Simple Task" vertex="1">
+          <mxGeometry height="50" width="90" x="-460" y="1805" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-149" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Delete&amp;nbsp;&amp;nbsp;Complex&lt;div&gt;&amp;nbsp;Task&lt;/div&gt;" vertex="1">
+          <mxGeometry height="65" width="110" x="-460" y="1865" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-150" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-149" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="JeAujxu2_EuD93IqJv6G-146" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-410" y="2085" as="sourcePoint" />
+            <mxPoint x="-360" y="2035" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-151" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="JeAujxu2_EuD93IqJv6G-146" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-520" y="1845" as="sourcePoint" />
+            <mxPoint x="-530" y="1835" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-152" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Delete Employee" vertex="1">
+          <mxGeometry height="50" width="90" x="-560" y="1795" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-153" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-137" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="JeAujxu2_EuD93IqJv6G-146" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-690" y="1960" />
+            </Array>
+            <mxPoint x="-650" y="2110" as="sourcePoint" />
+            <mxPoint x="-560" y="1920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-154" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Assign Task" vertex="1">
+          <mxGeometry height="50" width="90" x="-710" y="2040" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-155" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="JeAujxu2_EuD93IqJv6G-154" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-600" y="2010" as="sourcePoint" />
+            <mxPoint x="-580" y="1960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-156" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Complex to Complex" vertex="1">
+          <mxGeometry height="50" width="90" x="-600" y="1980" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-157" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Task to employee" vertex="1">
+          <mxGeometry height="65" width="110" x="-600" y="2040" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-158" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-157" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="JeAujxu2_EuD93IqJv6G-154" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-550" y="2260" as="sourcePoint" />
+            <mxPoint x="-500" y="2210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-159" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="JeAujxu2_EuD93IqJv6G-154" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-660" y="2020" as="sourcePoint" />
+            <mxPoint x="-670" y="2010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-160" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Simple To Complex" vertex="1">
+          <mxGeometry height="50" width="90" x="-700" y="1970" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-161" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-137" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" target="JeAujxu2_EuD93IqJv6G-154" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-810" y="2070" as="sourcePoint" />
+            <mxPoint x="-760" y="2020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-162" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Unassign Task" vertex="1">
+          <mxGeometry height="50" width="90" x="-460" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-163" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="JeAujxu2_EuD93IqJv6G-162" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-350" y="2000" as="sourcePoint" />
+            <mxPoint x="-330" y="1950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-164" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Complex from Complex" vertex="1">
+          <mxGeometry height="50" width="90" x="-350" y="1970" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-165" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Task from employee" vertex="1">
+          <mxGeometry height="65" width="110" x="-350" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-166" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-165" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="JeAujxu2_EuD93IqJv6G-162" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-300" y="2250" as="sourcePoint" />
+            <mxPoint x="-250" y="2200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-167" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="JeAujxu2_EuD93IqJv6G-162" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-410" y="2010" as="sourcePoint" />
+            <mxPoint x="-420" y="2000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-168" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Simple from Complex" vertex="1">
+          <mxGeometry height="50" width="90" x="-450" y="1960" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-169" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-137" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" target="JeAujxu2_EuD93IqJv6G-162" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-630" y="2130" />
+            </Array>
+            <mxPoint x="-650" y="2110" as="sourcePoint" />
+            <mxPoint x="-600" y="2060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-170" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-137" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-690" y="2150" as="sourcePoint" />
+            <mxPoint x="-820" y="2050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-171" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Flip Task Status" vertex="1">
+          <mxGeometry height="40" width="90" x="-830" y="2042.5" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-172" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Get Raport&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="90" x="-580" y="2165" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-173" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="JeAujxu2_EuD93IqJv6G-172" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-470" y="2135" as="sourcePoint" />
+            <mxPoint x="-450" y="2085" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-174" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Angajati&amp;gt;40hrs" vertex="1">
+          <mxGeometry height="50" width="90" x="-470" y="2105" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-175" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Nr of completed/ uncompleted tasks" vertex="1">
+          <mxGeometry height="65" width="110" x="-470" y="2165" as="geometry" />
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-176" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-175" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="JeAujxu2_EuD93IqJv6G-172" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="-420" y="2385" as="sourcePoint" />
+            <mxPoint x="-370" y="2335" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeAujxu2_EuD93IqJv6G-177" edge="1" parent="1" source="JeAujxu2_EuD93IqJv6G-137" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="JeAujxu2_EuD93IqJv6G-172" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="-800" y="2130" />
+            </Array>
+            <mxPoint x="-690" y="2150" as="sourcePoint" />
+            <mxPoint x="-640" y="2100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
