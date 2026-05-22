@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://dgrcw0jyalhd5"]
+
+[ext_resource type="Script" uid="uid://bcwgph53cou7a" path="res://Scripts/Item_Prayer_Scripts/item_data.gd" id="1_o4dfl"]
+
+[resource]
+script = ExtResource("1_o4dfl")
+item_name = "Hellish Glasses"
+description = "Perception at the cost of funkiness
+(+1 Wis)
+"
+wisdom_bonus = 1
+metadata/_custom_type_script = "uid://bcwgph53cou7a"

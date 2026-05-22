@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PrayerData" load_steps=2 format=3 uid="uid://cjui6dw1v3cxo"]
+
+[ext_resource type="Script" uid="uid://bb15bgyy0087k" path="res://Scripts/Item_Prayer_Scripts/prayer_data.gd" id="1_vkn3h"]
+
+[resource]
+script = ExtResource("1_vkn3h")
+prayer_name = "Prayer of Speed"
+description = "Grants +1 Dexterity permanently."
+base_cost = 5
+stat_to_boost = "dexterity"
+metadata/_custom_type_script = "uid://bb15bgyy0087k"

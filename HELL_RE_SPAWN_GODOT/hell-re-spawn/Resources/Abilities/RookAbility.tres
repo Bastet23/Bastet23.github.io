@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="RookAbility" load_steps=2 format=3 uid="uid://c7cj2h3db0nuw"]
+
+[ext_resource type="Script" uid="uid://cqxhtbgllkpx8" path="res://Scripts/Abilities/RookAbility.gd" id="1_8nqmj"]
+
+[resource]
+script = ExtResource("1_8nqmj")
+metadata/_custom_type_script = "uid://cqxhtbgllkpx8"

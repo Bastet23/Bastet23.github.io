@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="KnightData" load_steps=4 format=3 uid="uid://b3a4a2ecss24e"]
+
+[ext_resource type="Texture2D" uid="uid://be2w2fc5rpahc" path="res://Sprites/Units/Knights/SoulKnight.png" id="1_8lghu"]
+[ext_resource type="Resource" uid="uid://b6gpw8xa7b5o" path="res://Resources/Abilities/KnightAbility.tres" id="2_3pnxi"]
+[ext_resource type="Script" uid="uid://14kkaoc7ugqc" path="res://Scripts/Units/knight_data.gd" id="2_8lghu"]
+
+[resource]
+script = ExtResource("2_8lghu")
+character_name = "SoulKnight"
+unit_class = "Knight"
+icon = ExtResource("1_8lghu")
+mission_abilities = Array[Resource]([ExtResource("2_3pnxi")])
+strength = 2
+constitution = 2
+dexterity = 3
+metadata/_custom_type_script = "uid://ytl8uuunlg7c"

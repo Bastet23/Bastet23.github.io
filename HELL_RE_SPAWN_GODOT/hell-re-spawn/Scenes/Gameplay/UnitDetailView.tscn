@@ -1,0 +1,185 @@
+[gd_scene load_steps=5 format=3 uid="uid://28kuta277lcg"]
+
+[ext_resource type="Script" uid="uid://cdpbn5yunh10t" path="res://Scripts/Gameplay/stat_hexagon.gd" id="1_jlqjh"]
+[ext_resource type="Script" uid="uid://bvnbhk6j2mepd" path="res://Scripts/Gameplay/unit_detail_view.gd" id="1_mkcfs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkcfs"]
+bg_color = Color(0.6, 0.6, 0.6, 0.654902)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.16078432, 0.16078432, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4g1cb"]
+bg_color = Color(0.9051119, 0.4410161, 0.3848095, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.3861593, 0.119056396, 0.095212124, 1)
+
+[node name="UnitDetailView" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mkcfs")
+
+[node name="Background" type="ColorRect" parent="."]
+self_modulate = Color(0, 0, 0, 0.47058824)
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MainContainer" type="HBoxContainer" parent="."]
+z_index = 2
+custom_minimum_size = Vector2(1620, 700)
+layout_mode = 1
+offset_left = 150.0
+offset_top = 100.0
+offset_right = 1770.0
+offset_bottom = 800.0
+theme_override_constants/separation = 20
+
+[node name="LeftPanelBackground" type="Panel" parent="MainContainer"]
+self_modulate = Color(3.479, 3.479, 1.079, 1)
+custom_minimum_size = Vector2(1100, 700)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mkcfs")
+
+[node name="LeftPanel" type="VBoxContainer" parent="MainContainer/LeftPanelBackground"]
+self_modulate = Color(1, 1, 0.7294118, 1)
+custom_minimum_size = Vector2(1000, 600)
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 1080.0
+offset_bottom = 692.0
+
+[node name="TextAndPortrait" type="HBoxContainer" parent="MainContainer/LeftPanelBackground/LeftPanel"]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 2
+
+[node name="Header" type="VBoxContainer" parent="MainContainer/LeftPanelBackground/LeftPanel/TextAndPortrait"]
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MainContainer/LeftPanelBackground/LeftPanel/TextAndPortrait/Header"]
+custom_minimum_size = Vector2(400, 75)
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 50
+text = "Name"
+
+[node name="ClassLabel" type="Label" parent="MainContainer/LeftPanelBackground/LeftPanel/TextAndPortrait/Header"]
+custom_minimum_size = Vector2(400, 75)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_constants/paragraph_spacing = 0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 50
+text = "Class"
+
+[node name="Description" type="RichTextLabel" parent="MainContainer/LeftPanelBackground/LeftPanel/TextAndPortrait/Header"]
+custom_minimum_size = Vector2(400, 280)
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 31
+text = "Here we will have the character description with it s backstory and all that
+"
+horizontal_alignment = 1
+
+[node name="Portrait" type="TextureRect" parent="MainContainer/LeftPanelBackground/LeftPanel/TextAndPortrait"]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AbilityContainer" type="HBoxContainer" parent="MainContainer/LeftPanelBackground/LeftPanel"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Ability1" type="Panel" parent="MainContainer/LeftPanelBackground/LeftPanel/AbilityContainer"]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+
+[node name="Description" type="RichTextLabel" parent="MainContainer/LeftPanelBackground/LeftPanel/AbilityContainer/Ability1"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 1
+offset_right = 500.0
+offset_bottom = 200.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 31
+text = "Here we will have the ability description and symbol
+"
+horizontal_alignment = 1
+
+[node name="Ability2" type="Panel" parent="MainContainer/LeftPanelBackground/LeftPanel/AbilityContainer"]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+
+[node name="Description" type="RichTextLabel" parent="MainContainer/LeftPanelBackground/LeftPanel/AbilityContainer/Ability2"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 1
+offset_right = 504.0
+offset_bottom = 200.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 31
+text = "Here we will have the ability description and symbol
+"
+horizontal_alignment = 1
+
+[node name="RightPanelBackground" type="Panel" parent="MainContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4g1cb")
+
+[node name="RightPanel" type="VBoxContainer" parent="MainContainer/RightPanelBackground"]
+custom_minimum_size = Vector2(450, 650)
+layout_mode = 1
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 475.0
+offset_bottom = 675.0
+
+[node name="StatHexagon" type="Control" parent="MainContainer/RightPanelBackground/RightPanel"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+script = ExtResource("1_jlqjh")
+web_color = Color(0, 0, 0, 1)
+bone_color = Color(0.8296818, 0.34051856, 0.2869117, 1)
+
+[node name="Label" type="Label" parent="MainContainer/RightPanelBackground/RightPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3861593, 0.119056396, 0.095212124, 1)
+theme_override_colors/font_outline_color = Color(0.7553861, 0.75538605, 0.75538605, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 34
+text = "Equipment"
+
+[node name="ItemContainer" type="HBoxContainer" parent="MainContainer/RightPanelBackground/RightPanel"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Slot1" type="TextureRect" parent="MainContainer/RightPanelBackground/RightPanel/ItemContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Slot2" type="TextureRect" parent="MainContainer/RightPanelBackground/RightPanel/ItemContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2

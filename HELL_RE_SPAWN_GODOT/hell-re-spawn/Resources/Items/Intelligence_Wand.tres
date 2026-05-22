@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://nihunel3rmxe"]
+
+[ext_resource type="Script" uid="uid://bcwgph53cou7a" path="res://Scripts/Item_Prayer_Scripts/item_data.gd" id="1_32876"]
+
+[resource]
+script = ExtResource("1_32876")
+item_name = "Hellish Wand"
+description = "Pew Pew Pew
+(+1 Int)"
+intelligence_bonus = 1
+metadata/_custom_type_script = "uid://bcwgph53cou7a"

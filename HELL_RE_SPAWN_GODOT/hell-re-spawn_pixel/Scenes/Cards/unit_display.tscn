@@ -1,0 +1,289 @@
+[gd_scene load_steps=14 format=3 uid="uid://c7562l78sm4a8"]
+
+[ext_resource type="Script" uid="uid://biii0rdum8ka7" path="res://Scripts/Cards/unit_display.gd" id="1_ckpdh"]
+[ext_resource type="Resource" uid="uid://b3a4a2ecss24e" path="res://Resources/Unit_Resources/Knight_Basic.tres" id="2_rvysv"]
+[ext_resource type="Texture2D" uid="uid://ybwsotuyrh34" path="res://Sprites/Units/pawnx.jpeg" id="3_gf0fj"]
+[ext_resource type="Shader" uid="uid://cm3vode73xch5" path="res://Shaders/card_3d.gdshader" id="3_njdor"]
+[ext_resource type="Script" uid="uid://cy327c7b1v8s1" path="res://Scripts/Cards/hovering.gd" id="5_tifqb"]
+[ext_resource type="Texture2D" uid="uid://b6mwwe5neie7r" path="res://Sprites/Particles/flame_04.png" id="6_tifqb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tifqb"]
+bg_color = Color(0.6981817, 0.6634228, 0.5562495, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmhsk"]
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tifqb"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_njdor"]
+resource_local_to_scene = true
+shader = ExtResource("3_njdor")
+shader_parameter/rect_size = Vector2(150, 200)
+shader_parameter/fov = 90.0000042275
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 1.7099999979564018e-05
+shader_parameter/x_rot = 1.7099999979564018e-05
+shader_parameter/inset = 0.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b8wy6"]
+bg_color = Color(0.9661308, 0.38228795, 0.32883316, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.370952, 0.04631741, 0.10914992, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Curve" id="Curve_5yxlh"]
+_data = [Vector2(0, 0.8004978), 0.0, 0.0, 0, 0, Vector2(0.5017794, 0.9029449), 0.0, 0.0, 0, 0, Vector2(1, 0.8034682), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_03xle"]
+offsets = PackedFloat32Array(0, 0.14403293, 0.8353909, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.17254902, 1, 1, 1, 0.17254902, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="UnitDisplay" type="Button"]
+self_modulate = Color(0.06, 0.06, 0.06, 0)
+custom_minimum_size = Vector2(52, 68)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = -492.0
+offset_bottom = -196.0
+grow_horizontal = 2
+grow_vertical = 2
+action_mode = 0
+script = ExtResource("1_ckpdh")
+unit_data = ExtResource("2_rvysv")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(52, 68)
+render_target_update_mode = 4
+
+[node name="SelectionHighlight" type="Panel" parent="SubViewport"]
+z_index = 2
+custom_minimum_size = Vector2(48, 64)
+offset_right = 52.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tifqb")
+
+[node name="CardVisuals" type="Control" parent="SubViewport"]
+z_index = 2
+custom_minimum_size = Vector2(48, 64)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 50.0
+offset_bottom = 66.0
+mouse_filter = 2
+
+[node name="BackgroundPanel" type="PanelContainer" parent="SubViewport/CardVisuals"]
+clip_children = 1
+custom_minimum_size = Vector2(48, 64)
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 64.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cmhsk")
+
+[node name="UnitIcon" type="TextureRect" parent="SubViewport/CardVisuals/BackgroundPanel"]
+self_modulate = Color(0.40479898, 0.40479898, 0.40479898, 1)
+custom_minimum_size = Vector2(48, 64)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_gf0fj")
+expand_mode = 1
+
+[node name="NameLabel" type="Label" parent="SubViewport/CardVisuals/BackgroundPanel/UnitIcon"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -14.0
+offset_right = 63.0
+offset_bottom = 14.0
+grow_vertical = 0
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 8
+text = "Name"
+
+[node name="ClassLabel" type="Label" parent="SubViewport/CardVisuals/BackgroundPanel/UnitIcon"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_right = -10.0
+offset_bottom = 25.0
+grow_horizontal = 0
+theme_override_constants/line_spacing = 3
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 7
+text = "Class"
+horizontal_alignment = 2
+
+[node name="Shadow" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 0.39215687)
+z_index = -2
+custom_minimum_size = Vector2(48, 64)
+layout_mode = 1
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 54.0
+offset_bottom = 70.0
+mouse_filter = 2
+texture = SubResource("ViewportTexture_tifqb")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="CardRenderer" type="TextureRect" parent="."]
+z_index = 1
+material = SubResource("ShaderMaterial_njdor")
+custom_minimum_size = Vector2(52, 68)
+layout_mode = 1
+offset_right = 52.0
+offset_bottom = 68.0
+mouse_filter = 0
+texture = SubResource("ViewportTexture_tifqb")
+stretch_mode = 2
+script = ExtResource("5_tifqb")
+
+[node name="ActionBtn" type="Button" parent="CardRenderer"]
+z_index = -2
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 23.0
+offset_right = 50.0
+offset_bottom = 87.0
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_b8wy6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b8wy6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b8wy6")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_b8wy6")
+text = "
+
+
+
+Buy/Sell"
+
+[node name="ActionBtnShadow" type="Panel" parent="CardRenderer"]
+z_index = -1
+custom_minimum_size = Vector2(48, 24)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 49.0
+offset_right = 50.0
+offset_bottom = 73.0
+mouse_filter = 2
+
+[node name="Fogs" type="Control" parent="."]
+custom_minimum_size = Vector2(50, 64)
+anchors_preset = 0
+offset_right = 50.0
+offset_bottom = 64.0
+mouse_filter = 2
+
+[node name="FogParticles" type="CPUParticles2D" parent="Fogs"]
+z_index = -1
+position = Vector2(15, 19)
+rotation = 0.5235988
+emitting = false
+amount = 1
+texture = ExtResource("6_tifqb")
+lifetime = 6.0
+preprocess = 6.0
+explosiveness = 1.0
+direction = Vector2(0, 0)
+gravity = Vector2(0, 0)
+angular_velocity_min = -15.0
+angular_velocity_max = 15.0
+angle_max = 360.0
+scale_amount_min = 0.15
+scale_amount_max = 0.15
+scale_amount_curve = SubResource("Curve_5yxlh")
+color_ramp = SubResource("Gradient_03xle")
+
+[node name="FogParticles2" type="CPUParticles2D" parent="Fogs"]
+z_index = -1
+position = Vector2(37, 19)
+rotation = 0.5235988
+emitting = false
+amount = 1
+texture = ExtResource("6_tifqb")
+lifetime = 6.0
+preprocess = 6.0
+explosiveness = 1.0
+direction = Vector2(0, 0)
+gravity = Vector2(0, 0)
+angular_velocity_min = -15.0
+angular_velocity_max = 15.0
+angle_max = 360.0
+scale_amount_min = 0.15
+scale_amount_max = 0.15
+scale_amount_curve = SubResource("Curve_5yxlh")
+color_ramp = SubResource("Gradient_03xle")
+
+[node name="FogParticles3" type="CPUParticles2D" parent="Fogs"]
+z_index = -1
+position = Vector2(17, 43)
+rotation = 0.5235988
+emitting = false
+amount = 1
+texture = ExtResource("6_tifqb")
+lifetime = 6.0
+preprocess = 6.0
+explosiveness = 1.0
+direction = Vector2(0, 0)
+gravity = Vector2(0, 0)
+angular_velocity_min = -15.0
+angular_velocity_max = 15.0
+angle_max = 360.0
+scale_amount_min = 0.15
+scale_amount_max = 0.15
+scale_amount_curve = SubResource("Curve_5yxlh")
+color_ramp = SubResource("Gradient_03xle")
+
+[node name="FogParticles4" type="CPUParticles2D" parent="Fogs"]
+z_index = -1
+position = Vector2(35, 43)
+rotation = 0.5235988
+emitting = false
+amount = 1
+texture = ExtResource("6_tifqb")
+lifetime = 6.0
+preprocess = 6.0
+explosiveness = 1.0
+direction = Vector2(0, 0)
+gravity = Vector2(0, 0)
+angular_velocity_min = -15.0
+angular_velocity_max = 15.0
+angle_max = 360.0
+scale_amount_min = 0.15
+scale_amount_max = 0.15
+scale_amount_curve = SubResource("Curve_5yxlh")
+color_ramp = SubResource("Gradient_03xle")
+
+[connection signal="mouse_entered" from="Shadow" to="Shadow" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Shadow" to="Shadow" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CardRenderer" to="CardRenderer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CardRenderer" to="CardRenderer" method="_on_mouse_exited"]

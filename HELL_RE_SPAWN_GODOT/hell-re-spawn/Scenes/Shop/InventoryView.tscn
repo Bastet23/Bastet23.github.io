@@ -1,0 +1,175 @@
+[gd_scene load_steps=6 format=3 uid="uid://b24k76r8koww8"]
+
+[ext_resource type="Script" uid="uid://cdpbn5yunh10t" path="res://Scripts/Gameplay/stat_hexagon.gd" id="1_0x8nl"]
+[ext_resource type="Texture2D" uid="uid://ithu4pg2wgpa" path="res://Sprites/Shop/Caruta_Stat_Hexagon.png" id="1_310af"]
+[ext_resource type="Script" uid="uid://bo70scqqynr8q" path="res://Scripts/ShopScripts/InventoryView.gd" id="1_mvb14"]
+[ext_resource type="PackedScene" uid="uid://chtum15gjbtk5" path="res://Scenes/Items_Prayers/InventorySlot.tscn" id="4_mvb14"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mvb14"]
+bg_color = Color(0.9051119, 0.4410161, 0.3848095, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.3861593, 0.119056396, 0.095212124, 1)
+
+[node name="InventoryView" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_mvb14")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0.20784314, 0.20784314, 0.20784314, 0.9843137)
+
+[node name="LeftPanelItems" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 0
+offset_left = 250.0
+offset_top = 62.0
+offset_right = 1250.0
+offset_bottom = 812.0
+texture = ExtResource("1_310af")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="LeftPanelItems"]
+custom_minimum_size = Vector2(900, 600)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 950.0
+offset_bottom = 650.0
+
+[node name="ItemGrid" type="GridContainer" parent="LeftPanelItems/ScrollContainer"]
+custom_minimum_size = Vector2(1000, 700)
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 3
+
+[node name="RightPanelBackground" type="Panel" parent="."]
+custom_minimum_size = Vector2(550, 700)
+layout_mode = 0
+offset_left = 1256.0
+offset_top = 62.0
+offset_right = 1858.0
+offset_bottom = 822.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mvb14")
+
+[node name="StatHexagon" type="Control" parent="RightPanelBackground"]
+custom_minimum_size = Vector2(300, 300)
+anchors_preset = 0
+offset_left = 89.0
+offset_top = 119.0
+offset_right = 389.0
+offset_bottom = 419.0
+size_flags_horizontal = 4
+size_flags_vertical = 2
+script = ExtResource("1_0x8nl")
+web_color = Color(0, 0, 0, 1)
+bone_color = Color(0.8296818, 0.34051856, 0.2869117, 1)
+
+[node name="Item1Name" type="Label" parent="RightPanelBackground"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 446.0
+offset_right = 174.0
+offset_bottom = 474.0
+theme_override_colors/font_color = Color(0.3861593, 0.119056396, 0.095212124, 1)
+theme_override_colors/font_outline_color = Color(0.7553861, 0.75538605, 0.75538605, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 34
+text = "Equipment"
+
+[node name="Slot1" parent="RightPanelBackground" instance=ExtResource("4_mvb14")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 527.0
+offset_right = 293.0
+offset_bottom = 737.0
+
+[node name="Slot2" parent="RightPanelBackground" instance=ExtResource("4_mvb14")]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 524.0
+offset_right = 580.0
+offset_bottom = 734.0
+
+[node name="Item2Name" type="Label" parent="RightPanelBackground"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 451.0
+offset_right = 451.0
+offset_bottom = 479.0
+theme_override_colors/font_color = Color(0.3861593, 0.119056396, 0.095212124, 1)
+theme_override_colors/font_outline_color = Color(0.7553861, 0.75538605, 0.75538605, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 34
+text = "Equipment"
+
+[node name="Class" type="Label" parent="RightPanelBackground"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 24.0
+offset_right = 314.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.3861593, 0.119056396, 0.095212124, 1)
+theme_override_colors/font_outline_color = Color(0.7553861, 0.75538605, 0.75538605, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 34
+text = "Unit Class"
+
+[node name="Name" type="Label" parent="RightPanelBackground"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 171.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.3861593, 0.119056396, 0.095212124, 1)
+theme_override_colors/font_outline_color = Color(0.7553861, 0.75538605, 0.75538605, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 34
+text = "Unit Name"
+
+[node name="CloseButton" type="Button" parent="RightPanelBackground"]
+self_modulate = Color(1, 0.18431373, 0.043137256, 1)
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 477.0
+offset_top = 25.0
+offset_right = 527.0
+offset_bottom = 75.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 28
+text = "X"
+
+[node name="ItemToolTip" type="TextureRect" parent="."]
+z_index = 5
+layout_mode = 0
+offset_left = 894.0
+offset_top = 812.0
+offset_right = 1201.0
+offset_bottom = 1064.0
+mouse_filter = 2
+texture = ExtResource("1_310af")
+expand_mode = 1
+
+[node name="ToolTipText" type="RichTextLabel" parent="ItemToolTip"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 21.0
+offset_right = 273.0
+offset_bottom = 223.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "Aici va aparea textul suport"
+horizontal_alignment = 1

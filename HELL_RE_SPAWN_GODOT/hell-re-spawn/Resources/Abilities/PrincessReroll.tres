@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="PrincessRerollAbility" load_steps=2 format=3 uid="uid://df73li3pe8akj"]
+
+[ext_resource type="Script" uid="uid://k2apvlfsb113" path="res://Scripts/Abilities/PrincessRerollAbility.gd" id="1_oy2tv"]
+
+[resource]
+script = ExtResource("1_oy2tv")
+metadata/_custom_type_script = "uid://k2apvlfsb113"

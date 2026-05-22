@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PrincessData" load_steps=3 format=3 uid="uid://bexqrnirlnl15"]
+
+[ext_resource type="Texture2D" uid="uid://ybwsotuyrh34" path="res://Sprites/Units/pawnx.jpeg" id="1_d4ft7"]
+[ext_resource type="Script" uid="uid://b8qh71ywddhrt" path="res://Scripts/Units/princess_data.gd" id="2_d4ft7"]
+
+[resource]
+script = ExtResource("2_d4ft7")
+character_name = "Soul Princess"
+icon = ExtResource("1_d4ft7")
+unit_class = "Princess"
+dexterity = 3
+intelligence = 2
+charisma = 2
+metadata/_custom_type_script = "uid://ytl8uuunlg7c"

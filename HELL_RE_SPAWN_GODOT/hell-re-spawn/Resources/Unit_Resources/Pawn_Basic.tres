@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PawnData" load_steps=3 format=3 uid="uid://deplx1yo7te2n"]
+
+[ext_resource type="Texture2D" uid="uid://c54qytnexnav0" path="res://Sprites/Units/Pawns/SoulPawn.png" id="1_mf4h0"]
+[ext_resource type="Script" uid="uid://by5bn1a0u2yiy" path="res://Scripts/Units/pawn_data.gd" id="2_mf4h0"]
+
+[resource]
+script = ExtResource("2_mf4h0")
+character_name = "SoulPawn"
+icon = ExtResource("1_mf4h0")
+metadata/_custom_type_script = "uid://ytl8uuunlg7c"

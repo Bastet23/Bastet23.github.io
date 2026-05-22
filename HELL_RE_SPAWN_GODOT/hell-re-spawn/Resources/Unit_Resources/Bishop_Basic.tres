@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BishopData" load_steps=4 format=3 uid="uid://depype3s0acvq"]
+
+[ext_resource type="Texture2D" uid="uid://cotwea6622kml" path="res://Sprites/Units/Bishops/Soul_Bishop.png" id="1_h0v6h"]
+[ext_resource type="Script" uid="uid://c3dhk06oihefw" path="res://Scripts/Units/bishop_data.gd" id="1_ouxsy"]
+[ext_resource type="Resource" uid="uid://duv3hbvucsg4w" path="res://Resources/Abilities/BishopAbility.tres" id="2_8v03u"]
+
+[resource]
+script = ExtResource("1_ouxsy")
+character_name = "SoulBishop"
+unit_class = "Bishop"
+icon = ExtResource("1_h0v6h")
+mission_abilities = Array[Resource]([ExtResource("2_8v03u")])
+wisdom = 3
+intelligence = 3
+metadata/_custom_type_script = "uid://ytl8uuunlg7c"

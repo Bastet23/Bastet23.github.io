@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://4chdbwbhssga"]
+
+[ext_resource type="Script" uid="uid://bcwgph53cou7a" path="res://Scripts/Item_Prayer_Scripts/item_data.gd" id="1_nf5eh"]
+
+[resource]
+script = ExtResource("1_nf5eh")
+item_name = "Hellish Hat"
+description = "Makes you fall in love
+(+1 Cha)"
+charisma_bonus = 1
+metadata/_custom_type_script = "uid://bcwgph53cou7a"

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3 uid="uid://b3wokuv8h3xs4"]
+
+[ext_resource type="Script" uid="uid://dbb1up40oxbj4" path="res://Scripts/Missions/mission_def.gd" id="1_r84va"]
+
+[resource]
+script = ExtResource("1_r84va")
+title = "Imp Propaganda"
+description = "Some Imps are looking to talk ill of the rising king.
+Make haste in your arrival.
+Persuade them to stop."
+max_party_size = 2
+is_critical = true
+base_work_time = 10.0
+base_travel_time = 10.0
+expiration_time = 10.0
+req_dexterity = 3
+req_charisma = 4
+req_wisdom = 2
+req_intelligence = 2
+metadata/_custom_type_script = "uid://dbb1up40oxbj4"

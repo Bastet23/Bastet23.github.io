@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RookData" load_steps=3 format=3 uid="uid://cmsf7ajyoyu4p"]
+
+[ext_resource type="Texture2D" uid="uid://hxjrs4xci3gp" path="res://Sprites/Units/rookx.jpg" id="1_1dog6"]
+[ext_resource type="Script" uid="uid://djyep12oofab0" path="res://Scripts/Units/rook_data.gd" id="2_1dog6"]
+
+[resource]
+script = ExtResource("2_1dog6")
+character_name = "Soul Rook"
+icon = ExtResource("1_1dog6")
+unit_class = "Rook"
+strength = 3
+constitution = 3
+metadata/_custom_type_script = "uid://ytl8uuunlg7c"

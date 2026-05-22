@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BishopData" load_steps=3 format=3 uid="uid://depype3s0acvq"]
+
+[ext_resource type="Texture2D" uid="uid://ybwsotuyrh34" path="res://Sprites/Units/pawnx.jpeg" id="1_h0v6h"]
+[ext_resource type="Script" uid="uid://c3dhk06oihefw" path="res://Scripts/Units/bishop_data.gd" id="1_ouxsy"]
+
+[resource]
+script = ExtResource("1_ouxsy")
+character_name = "Soul Bishop"
+icon = ExtResource("1_h0v6h")
+unit_class = "Bishop"
+intelligence = 3
+wisdom = 3
+metadata/_custom_type_script = "uid://ytl8uuunlg7c"

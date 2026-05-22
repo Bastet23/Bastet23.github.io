@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="QueenData" load_steps=4 format=3 uid="uid://clcnwh3tq08xl"]
+
+[ext_resource type="Texture2D" uid="uid://cc30pvxfhq8at" path="res://Sprites/Units/Queens/Soul_Queen.png" id="1_dj2q5"]
+[ext_resource type="Script" uid="uid://btno40tgdu0ud" path="res://Scripts/Units/queen_data.gd" id="1_sai8l"]
+[ext_resource type="Resource" uid="uid://ootle0uj8p12" path="res://Resources/Abilities/QueenAbility.tres" id="2_vrskf"]
+
+[resource]
+script = ExtResource("1_sai8l")
+character_name = "SoulQueen"
+unit_class = "Queen"
+icon = ExtResource("1_dj2q5")
+mission_abilities = Array[Resource]([ExtResource("2_vrskf")])
+strength = 2
+constitution = 2
+dexterity = 2
+charisma = 2
+wisdom = 2
+intelligence = 2
+metadata/_custom_type_script = "uid://ytl8uuunlg7c"

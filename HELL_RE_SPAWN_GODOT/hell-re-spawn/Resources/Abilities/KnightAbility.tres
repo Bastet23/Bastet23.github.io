@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="KnightAbility" load_steps=2 format=3 uid="uid://b6gpw8xa7b5o"]
+
+[ext_resource type="Script" uid="uid://tqx18rhml3ma" path="res://Scripts/Abilities/KnightAbility.gd" id="1_57n4l"]
+
+[resource]
+script = ExtResource("1_57n4l")
+metadata/_custom_type_script = "uid://tqx18rhml3ma"

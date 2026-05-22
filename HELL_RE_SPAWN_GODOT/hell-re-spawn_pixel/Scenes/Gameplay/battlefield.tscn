@@ -1,0 +1,251 @@
+[gd_scene load_steps=22 format=3 uid="uid://ctv24pgi4fd2"]
+
+[ext_resource type="Script" uid="uid://bk7gyfmn4fojo" path="res://Scripts/Gameplay/battlefield.gd" id="1_niyxn"]
+[ext_resource type="PackedScene" uid="uid://28kuta277lcg" path="res://Scenes/Gameplay/UnitDetailView.tscn" id="2_emqei"]
+[ext_resource type="Script" uid="uid://emaoadilh0j0" path="res://Scripts/Missions/mission_manager.gd" id="3_g0i34"]
+[ext_resource type="PackedScene" uid="uid://tba1fv1hh4e1" path="res://Scenes/Gameplay/ActiveMissionNode.tscn" id="4_f6ktx"]
+[ext_resource type="Script" uid="uid://dbb1up40oxbj4" path="res://Scripts/Missions/mission_def.gd" id="5_8v7md"]
+[ext_resource type="Resource" uid="uid://c4lkrer3yhyw4" path="res://Resources/Missions/GoblinRaid.tres" id="6_1gps4"]
+[ext_resource type="Resource" uid="uid://b3wokuv8h3xs4" path="res://Resources/Missions/ImpPropaganda.tres" id="7_rbvnv"]
+[ext_resource type="Texture2D" uid="uid://rxn4jnxv8rch" path="res://Sprites/Maps/Placeholder_map2.webp" id="8_syskl"]
+[ext_resource type="PackedScene" uid="uid://dcg2p6jwij5gb" path="res://Scenes/Gameplay/mission_briefing.tscn" id="9_sfl57"]
+[ext_resource type="PackedScene" uid="uid://c7f0tlkaua5jc" path="res://Scenes/Gameplay/mission_debrief.tscn" id="10_w0fvf"]
+[ext_resource type="Texture2D" uid="uid://biak2jwkslfaq" path="res://Sprites/Maps/wood.jpg" id="11_u2638"]
+[ext_resource type="PackedScene" uid="uid://c7562l78sm4a8" path="res://Scenes/Cards/unit_display.tscn" id="12_13ln0"]
+[ext_resource type="Resource" uid="uid://deplx1yo7te2n" path="res://Resources/Unit_Resources/Pawn_Basic.tres" id="13_cgptx"]
+[ext_resource type="Resource" uid="uid://depype3s0acvq" path="res://Resources/Unit_Resources/Bishop_Basic.tres" id="14_1nt1x"]
+[ext_resource type="Resource" uid="uid://cmsf7ajyoyu4p" path="res://Resources/Unit_Resources/Rook_Basic.tres" id="15_p8yqc"]
+[ext_resource type="Resource" uid="uid://clcnwh3tq08xl" path="res://Resources/Unit_Resources/Queen_Basic.tres" id="16_igw0s"]
+[ext_resource type="Resource" uid="uid://bexqrnirlnl15" path="res://Resources/Unit_Resources/Princess_basic.tres" id="17_iw6s0"]
+[ext_resource type="Resource" uid="uid://cgq4fakwmjl5o" path="res://Resources/Unit_Resources/Jester_Basic.tres" id="18_v3vwg"]
+[ext_resource type="Texture2D" uid="uid://b6twe6cqt5lqu" path="res://Sprites/Items/blue_circle1.png" id="19_kvt84"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7whru"]
+bg_color = Color(0.17659003, 0.14557916, 0.12647614, 1)
+border_width_left = 20
+border_width_top = 5
+border_width_right = 20
+border_width_bottom = 5
+border_color = Color(1.549, 1.431, 0.195, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_navs4"]
+bg_color = Color(0.78039217, 0.39607844, 0.9490196, 1)
+border_width_left = 20
+border_width_top = 5
+border_width_right = 20
+border_width_bottom = 5
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="Battlefield" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_niyxn")
+
+[node name="UnitDetailView" parent="." instance=ExtResource("2_emqei")]
+visible = false
+z_index = 100
+layout_mode = 1
+
+[node name="MissionManager" type="Node" parent="." node_paths=PackedStringArray("map_spots_container", "mission_container")]
+script = ExtResource("3_g0i34")
+mission_visual_scene = ExtResource("4_f6ktx")
+mission_pool = Array[ExtResource("5_8v7md")]([ExtResource("6_1gps4"), ExtResource("7_rbvnv")])
+min_spawn_time = null
+max_spawn_time = null
+map_spots_container = NodePath("../MapBackground/AllSpawnPoints")
+mission_container = NodePath("../MapBackground/ActiveMissionContainer")
+
+[node name="MapBackground" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1320, 750)
+layout_mode = 0
+offset_left = 300.0
+offset_top = 50.0
+offset_right = 1620.0
+offset_bottom = 813.0
+texture = ExtResource("8_syskl")
+
+[node name="AllSpawnPoints" type="Node2D" parent="MapBackground"]
+
+[node name="SpawnPoints" type="Node2D" parent="MapBackground/AllSpawnPoints"]
+position = Vector2(207, 239)
+
+[node name="SpawnPoints2" type="Node2D" parent="MapBackground/AllSpawnPoints"]
+position = Vector2(217, 424)
+
+[node name="SpawnPoints3" type="Node2D" parent="MapBackground/AllSpawnPoints"]
+position = Vector2(327, 401)
+
+[node name="SpawnPoints4" type="Node2D" parent="MapBackground/AllSpawnPoints"]
+position = Vector2(316, 238)
+
+[node name="SpawnPoints5" type="Node2D" parent="MapBackground/AllSpawnPoints"]
+position = Vector2(474, 223)
+
+[node name="SpawnPoints6" type="Node2D" parent="MapBackground/AllSpawnPoints"]
+position = Vector2(520, 589)
+
+[node name="SpawnPoints7" type="Node2D" parent="MapBackground/AllSpawnPoints"]
+position = Vector2(746, 535)
+
+[node name="SpawnPoints8" type="Node2D" parent="MapBackground/AllSpawnPoints"]
+position = Vector2(821, 215)
+
+[node name="SpawnPoints9" type="Node2D" parent="MapBackground/AllSpawnPoints"]
+position = Vector2(1030, 555)
+
+[node name="SpawnPoints10" type="Node2D" parent="MapBackground/AllSpawnPoints"]
+position = Vector2(1073, 236)
+
+[node name="ActiveMissionContainer" type="Node2D" parent="MapBackground"]
+
+[node name="MissionBriefing" parent="." instance=ExtResource("9_sfl57")]
+visible = false
+z_index = 2
+layout_mode = 1
+offset_bottom = -180.0
+
+[node name="MissionDebrief" parent="." instance=ExtResource("10_w0fvf")]
+visible = false
+z_index = 2
+layout_mode = 1
+offset_bottom = -180.0
+
+[node name="BackGround" type="TextureRect" parent="."]
+self_modulate = Color(0.23319516, 0.22290702, 8.82699e-08, 1)
+z_index = -2
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+texture = ExtResource("11_u2638")
+
+[node name="HandContainer" type="HBoxContainer" parent="."]
+z_index = 100
+z_as_relative = false
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 160.0
+offset_top = -250.0
+offset_right = -160.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="UnitDisplay" parent="HandContainer" instance=ExtResource("12_13ln0")]
+layout_mode = 2
+unit_data = ExtResource("13_cgptx")
+
+[node name="UnitDisplay2" parent="HandContainer" instance=ExtResource("12_13ln0")]
+layout_mode = 2
+
+[node name="UnitDisplay3" parent="HandContainer" instance=ExtResource("12_13ln0")]
+layout_mode = 2
+unit_data = ExtResource("14_1nt1x")
+
+[node name="UnitDisplay4" parent="HandContainer" instance=ExtResource("12_13ln0")]
+layout_mode = 2
+unit_data = ExtResource("15_p8yqc")
+
+[node name="UnitDisplay5" parent="HandContainer" instance=ExtResource("12_13ln0")]
+layout_mode = 2
+unit_data = ExtResource("16_igw0s")
+
+[node name="UnitDisplay6" parent="HandContainer" instance=ExtResource("12_13ln0")]
+layout_mode = 2
+unit_data = ExtResource("17_iw6s0")
+
+[node name="UnitDisplay7" parent="HandContainer" instance=ExtResource("12_13ln0")]
+layout_mode = 2
+unit_data = ExtResource("18_v3vwg")
+
+[node name="TopBar" type="ColorRect" parent="."]
+self_modulate = Color(0.5137255, 0.50980395, 0, 0.81960785)
+layout_mode = 0
+offset_left = 30.0
+offset_top = 50.0
+offset_right = 380.0
+offset_bottom = 200.0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="TopBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Label2" type="Label" parent="TopBar/HBoxContainer"]
+layout_mode = 2
+
+[node name="InfluenceBar" type="ProgressBar" parent="TopBar/HBoxContainer"]
+custom_minimum_size = Vector2(350, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_7whru")
+theme_override_styles/fill = SubResource("StyleBoxFlat_navs4")
+show_percentage = false
+
+[node name="InfText" type="Label" parent="TopBar/HBoxContainer/InfluenceBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="StatsContainer" type="HBoxContainer" parent="TopBar/HBoxContainer"]
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="GoldLabel" type="Label" parent="TopBar/HBoxContainer/StatsContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 35
+text = "Gold: 0"
+
+[node name="Seal" type="TextureRect" parent="TopBar/HBoxContainer/StatsContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("19_kvt84")
+
+[node name="Seal2" type="TextureRect" parent="TopBar/HBoxContainer/StatsContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("19_kvt84")
+
+[node name="Seal3" type="TextureRect" parent="TopBar/HBoxContainer/StatsContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("19_kvt84")

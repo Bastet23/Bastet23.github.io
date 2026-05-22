@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="JesterAbility" load_steps=2 format=3 uid="uid://bvk4y0rogvcb0"]
+
+[ext_resource type="Script" uid="uid://c2lwn8wdtms6v" path="res://Scripts/Abilities/JesterAbility.gd" id="1_8erf7"]
+
+[resource]
+script = ExtResource("1_8erf7")
+metadata/_custom_type_script = "uid://c2lwn8wdtms6v"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PrayerData" load_steps=2 format=3 uid="uid://da6yx8fu7kke2"]
+
+[ext_resource type="Script" uid="uid://bb15bgyy0087k" path="res://Scripts/Item_Prayer_Scripts/prayer_data.gd" id="1_yntk8"]
+
+[resource]
+script = ExtResource("1_yntk8")
+prayer_name = "Prayer of Intelligence"
+description = "Grants +1 Wisdom
+ permanently."
+base_cost = 5
+stat_to_boost = "wisdom"
+metadata/_custom_type_script = "uid://bb15bgyy0087k"

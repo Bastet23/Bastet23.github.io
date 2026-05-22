@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cscwl4430mhl"]
+
+[ext_resource type="Shader" uid="uid://dobde3smb51bx" path="res://Shaders/burn_effect.gdshader" id="1_1emrf"]
+[ext_resource type="Script" uid="uid://hm6bl21ey4sp" path="res://Scripts/Cards/BurnEffect.gd" id="1_arjvt"]
+[ext_resource type="Texture2D" uid="uid://dyjbntrlelj0g" path="res://Sprites/Shop/Burn_Noise3.png" id="2_j26lx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wipdb"]
+shader = ExtResource("1_1emrf")
+shader_parameter/dissolve_texture = ExtResource("2_j26lx")
+shader_parameter/dissolve_value = 1.0
+shader_parameter/burn_size = 0.1499999966472
+shader_parameter/ash_color = Color(0.76267755, 0.8648569, 0.9999996, 1)
+shader_parameter/burn_color = Color(0, 0.73333335, 0.72156864, 0.37254903)
+shader_parameter/proburn_color = Color(0, 0.73333335, 0.72156864, 0.3372549)
+
+[node name="BurnEffect" type="TextureRect"]
+z_index = 3
+material = SubResource("ShaderMaterial_wipdb")
+custom_minimum_size = Vector2(150, 200)
+script = ExtResource("1_arjvt")

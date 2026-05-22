@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RookData" load_steps=4 format=3 uid="uid://cmsf7ajyoyu4p"]
+
+[ext_resource type="Texture2D" uid="uid://hqj1jl6mtjg7" path="res://Sprites/Units/Rooks/Soul_Rook.png" id="1_1dog6"]
+[ext_resource type="Script" uid="uid://djyep12oofab0" path="res://Scripts/Units/rook_data.gd" id="2_1dog6"]
+[ext_resource type="Resource" uid="uid://c7cj2h3db0nuw" path="res://Resources/Abilities/RookAbility.tres" id="2_mxoit"]
+
+[resource]
+script = ExtResource("2_1dog6")
+character_name = "SoulRook"
+unit_class = "Rook"
+icon = ExtResource("1_1dog6")
+mission_abilities = Array[Resource]([ExtResource("2_mxoit")])
+strength = 3
+constitution = 3
+metadata/_custom_type_script = "uid://ytl8uuunlg7c"

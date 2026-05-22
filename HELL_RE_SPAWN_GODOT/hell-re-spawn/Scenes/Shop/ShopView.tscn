@@ -1,0 +1,440 @@
+[gd_scene load_steps=28 format=3 uid="uid://elqd38yu3voj"]
+
+[ext_resource type="Script" uid="uid://cjuv4gbmyijxx" path="res://Scripts/ShopScripts/ShopView.gd" id="1_e07oj"]
+[ext_resource type="Texture2D" uid="uid://ihdm4k8w406l" path="res://Sprites/Shop/shop_placeholder.jpg" id="1_ff7gl"]
+[ext_resource type="Texture2D" uid="uid://7upsp7yjsfno" path="res://Sprites/Shop/Mammon_Cart.png" id="3_iv0qy"]
+[ext_resource type="Texture2D" uid="uid://dhom8soj4n1y2" path="res://Sprites/Shop/Mammon_Shaded.png" id="4_e07oj"]
+[ext_resource type="Texture2D" uid="uid://dlsxrt4yic4eq" path="res://Sprites/Units/TopBar.png" id="5_7i462"]
+[ext_resource type="PackedScene" uid="uid://c7562l78sm4a8" path="res://Scenes/Cards/unit_display.tscn" id="5_ojofb"]
+[ext_resource type="Resource" uid="uid://deplx1yo7te2n" path="res://Resources/Unit_Resources/Pawn_Basic.tres" id="6_m0c8k"]
+[ext_resource type="Resource" uid="uid://depype3s0acvq" path="res://Resources/Unit_Resources/Bishop_Basic.tres" id="7_pe0ac"]
+[ext_resource type="Resource" uid="uid://cmsf7ajyoyu4p" path="res://Resources/Unit_Resources/Rook_Basic.tres" id="8_iv0qy"]
+[ext_resource type="Resource" uid="uid://clcnwh3tq08xl" path="res://Resources/Unit_Resources/Queen_Basic.tres" id="9_e07oj"]
+[ext_resource type="Resource" uid="uid://bexqrnirlnl15" path="res://Resources/Unit_Resources/Princess_basic.tres" id="10_1byp8"]
+[ext_resource type="Resource" uid="uid://cgq4fakwmjl5o" path="res://Resources/Unit_Resources/Jester_Basic.tres" id="11_yk4es"]
+[ext_resource type="Texture2D" uid="uid://b6twe6cqt5lqu" path="res://Sprites/Items/blue_circle1.png" id="12_m0c8k"]
+[ext_resource type="Texture2D" uid="uid://lw1gkpewnbqg" path="res://Sprites/Shop/Scarf_for_hand_container-removebg-preview.png" id="13_pe0ac"]
+[ext_resource type="Texture2D" uid="uid://ithu4pg2wgpa" path="res://Sprites/Shop/Caruta_Stat_Hexagon.png" id="14_1byp8"]
+[ext_resource type="Shader" uid="uid://dobde3smb51bx" path="res://Shaders/burn_effect.gdshader" id="14_yk4es"]
+[ext_resource type="Script" uid="uid://cdpbn5yunh10t" path="res://Scripts/Gameplay/stat_hexagon.gd" id="15_1byp8"]
+[ext_resource type="Texture2D" uid="uid://dyjbntrlelj0g" path="res://Sprites/Shop/Burn_Noise3.png" id="15_gd26v"]
+[ext_resource type="Texture2D" uid="uid://bdc1ng1h0mk4h" path="res://Sprites/Shop/Abilitati_signs.png" id="16_yk4es"]
+[ext_resource type="PackedScene" uid="uid://b24k76r8koww8" path="res://Scenes/Shop/InventoryView.tscn" id="20_e1n8f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7i462"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pe0ac"]
+bg_color = Color(0.17659003, 0.14557916, 0.12647614, 1)
+border_width_left = 20
+border_width_top = 5
+border_width_right = 20
+border_width_bottom = 5
+border_color = Color(1.549, 1.431, 0.195, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iv0qy"]
+bg_color = Color(0.78039217, 0.39607844, 0.9490196, 1)
+border_width_left = 20
+border_width_top = 5
+border_width_right = 20
+border_width_bottom = 5
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e07oj"]
+bg_color = Color(0.9661308, 0.38228795, 0.32883316, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.370952, 0.04631741, 0.10914992, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gd26v"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gd26v"]
+shader = ExtResource("14_yk4es")
+shader_parameter/dissolve_texture = ExtResource("15_gd26v")
+shader_parameter/dissolve_value = 0.0
+shader_parameter/burn_size = 0.3499999921768
+shader_parameter/ash_color = Color(0, 0, 0, 1)
+shader_parameter/burn_color = Color(0.882, 0.777, 0.169, 1)
+shader_parameter/proburn_color = Color(0.804, 0.2, 0.093, 1)
+shader_parameter/noise_offset = Vector2(0, 0)
+shader_parameter/noise_scale = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7i462"]
+shader = ExtResource("14_yk4es")
+shader_parameter/dissolve_texture = ExtResource("15_gd26v")
+shader_parameter/dissolve_value = 1.0
+shader_parameter/burn_size = 0.3499999921768
+shader_parameter/ash_color = Color(0, 0, 0, 1)
+shader_parameter/burn_color = Color(0.882, 0.777, 0.169, 1)
+shader_parameter/proburn_color = Color(0.804, 0.2, 0.093, 1)
+shader_parameter/noise_offset = Vector2(0, 0)
+shader_parameter/noise_scale = Vector2(1, 1)
+
+[node name="ShopView" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e07oj")
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.6156863)
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+texture = ExtResource("1_ff7gl")
+
+[node name="Caravan" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = -25.0
+offset_right = 1966.0
+offset_bottom = 1055.0
+mouse_filter = 2
+texture = ExtResource("3_iv0qy")
+stretch_mode = 2
+
+[node name="ShopSlotsContainer" type="HBoxContainer" parent="Caravan"]
+z_index = 1
+layout_mode = 0
+offset_left = 681.0
+offset_top = 217.0
+offset_right = 1237.0
+offset_bottom = 457.0
+mouse_filter = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="ResetCardsButton" type="Button" parent="Caravan"]
+self_modulate = Color(1.749, 1.749, 1.749, 1)
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = 711.0
+offset_top = 36.0
+offset_right = 911.0
+offset_bottom = 136.0
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_7i462")
+text = "Reroll"
+
+[node name="ResetItemsButton" type="Button" parent="Caravan"]
+self_modulate = Color(1.749, 1.749, 1.749, 1)
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = 1082.0
+offset_top = 484.0
+offset_right = 1282.0
+offset_bottom = 584.0
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_7i462")
+text = "Reroll"
+
+[node name="ItemsContainer" type="HBoxContainer" parent="Caravan"]
+z_index = 1
+layout_mode = 0
+offset_left = 128.0
+offset_top = 594.0
+offset_right = 825.0
+offset_bottom = 814.0
+mouse_filter = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="PrayersContainer" type="HBoxContainer" parent="Caravan"]
+z_index = 1
+layout_mode = 0
+offset_left = 826.0
+offset_top = 594.0
+offset_right = 1294.0
+offset_bottom = 824.0
+mouse_filter = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Mammon" type="TextureRect" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 258.0
+offset_right = 701.0
+offset_bottom = 963.0
+mouse_filter = 2
+texture = ExtResource("4_e07oj")
+stretch_mode = 2
+
+[node name="TopBar" type="TextureRect" parent="."]
+z_index = 10
+layout_mode = 0
+offset_right = 350.0
+offset_bottom = 150.0
+mouse_filter = 2
+texture = ExtResource("5_7i462")
+
+[node name="Label2" type="Label" parent="TopBar"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 122.0
+offset_right = 409.0
+offset_bottom = 141.0
+
+[node name="InfText" type="Label" parent="TopBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 88.0
+offset_top = 58.0
+offset_right = -238.0
+offset_bottom = -139.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="InfluenceBar" type="ProgressBar" parent="TopBar"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 47.0
+offset_right = 341.0
+offset_bottom = 87.0
+size_flags_horizontal = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_pe0ac")
+theme_override_styles/fill = SubResource("StyleBoxFlat_iv0qy")
+show_percentage = false
+
+[node name="GoldLabel" type="Label" parent="TopBar"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 103.0
+offset_right = 200.0
+offset_bottom = 153.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Gold: 0"
+
+[node name="Seal" type="TextureRect" parent="TopBar"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 196.0
+offset_top = 107.0
+offset_right = 246.0
+offset_bottom = 157.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("12_m0c8k")
+
+[node name="Seal3" type="TextureRect" parent="TopBar"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 293.0
+offset_top = 106.0
+offset_right = 343.0
+offset_bottom = 156.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("12_m0c8k")
+
+[node name="Seal2" type="TextureRect" parent="TopBar"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 247.0
+offset_top = 107.0
+offset_right = 297.0
+offset_bottom = 157.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("12_m0c8k")
+
+[node name="Scarf_hand_container" type="TextureRect" parent="."]
+z_index = 6
+custom_minimum_size = Vector2(1600, 200)
+layout_mode = 0
+offset_left = 160.0
+offset_top = 815.0
+offset_right = 1760.0
+offset_bottom = 1079.0
+mouse_filter = 2
+texture = ExtResource("13_pe0ac")
+
+[node name="HandContainer" type="HBoxContainer" parent="Scarf_hand_container"]
+z_index = 2
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 1
+offset_top = 15.0
+offset_right = 1600.0
+offset_bottom = 215.0
+mouse_filter = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="UnitDisplay" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+unit_data = ExtResource("6_m0c8k")
+
+[node name="UnitDisplay2" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+
+[node name="UnitDisplay3" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+unit_data = ExtResource("7_pe0ac")
+
+[node name="UnitDisplay4" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+unit_data = ExtResource("8_iv0qy")
+
+[node name="UnitDisplay5" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+unit_data = ExtResource("9_e07oj")
+
+[node name="UnitDisplay6" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+unit_data = ExtResource("10_1byp8")
+
+[node name="UnitDisplay7" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+unit_data = ExtResource("11_yk4es")
+
+[node name="InteractionOverlay" type="Control" parent="."]
+visible = false
+z_index = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="ActionBtn" type="Button" parent="InteractionOverlay"]
+visible = false
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 0
+offset_left = 25.0
+offset_top = 140.0
+offset_right = 125.0
+offset_bottom = 244.0
+theme_override_constants/outline_size = 5
+theme_override_styles/normal = SubResource("StyleBoxFlat_e07oj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e07oj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e07oj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_e07oj")
+text = "
+
+
+Buy/Sell"
+
+[node name="DescriptionSign" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 725.0
+offset_top = 116.0
+offset_right = 1181.0
+offset_bottom = 567.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gd26v")
+
+[node name="HexagonPaper" type="TextureRect" parent="DescriptionSign"]
+material = SubResource("ShaderMaterial_gd26v")
+layout_mode = 0
+offset_left = 38.0
+offset_top = -60.0
+offset_right = 410.0
+offset_bottom = 285.0
+texture = ExtResource("14_1byp8")
+
+[node name="StatHexagon" type="Control" parent="DescriptionSign/HexagonPaper"]
+use_parent_material = true
+custom_minimum_size = Vector2(190, 190)
+anchors_preset = 0
+offset_left = -27.0
+offset_top = 39.0
+offset_right = 388.0
+offset_bottom = 300.0
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_filter = 2
+script = ExtResource("15_1byp8")
+web_color = Color(0, 0, 0, 1)
+bone_color = Color(0.8296818, 0.34051856, 0.2869117, 1)
+stat_outline_color = Color(0.0986787, 0.19375654, 0.043826107, 1)
+req_web_color = Color(1, 0.2, 0.2, 0.84313726)
+
+[node name="ItemRichTextLabel" type="RichTextLabel" parent="DescriptionSign/HexagonPaper"]
+z_index = 10
+layout_mode = 0
+offset_left = 30.0
+offset_top = 63.0
+offset_right = 329.0
+offset_bottom = 293.0
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+horizontal_alignment = 1
+
+[node name="AbilitySigns" type="TextureRect" parent="DescriptionSign"]
+material = SubResource("ShaderMaterial_7i462")
+layout_mode = 0
+offset_left = -43.0
+offset_top = 231.0
+offset_right = 500.0
+offset_bottom = 420.0
+texture = ExtResource("16_yk4es")
+
+[node name="AbilityLabel2" type="RichTextLabel" parent="DescriptionSign/AbilitySigns"]
+z_index = 1
+custom_minimum_size = Vector2(190, 95)
+layout_mode = 0
+offset_left = 297.0
+offset_top = 63.0
+offset_right = 520.0
+offset_bottom = 185.0
+theme_override_constants/outline_size = 9
+text = "Here there will be displayed the second ability"
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="AbilityLabel1" type="RichTextLabel" parent="DescriptionSign/AbilitySigns"]
+z_index = 1
+custom_minimum_size = Vector2(190, 95)
+layout_mode = 0
+offset_left = 21.0
+offset_top = 65.0
+offset_right = 245.0
+offset_bottom = 183.0
+theme_override_constants/outline_size = 9
+text = "Here there will be displayed the first 
+ability"
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="InventoryView" parent="." instance=ExtResource("20_e1n8f")]
+visible = false
+z_index = 5
+layout_mode = 1
+
+[node name="InventoryButton" type="TextureButton" parent="."]
+z_index = 6
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 847.0
+offset_right = 197.0
+offset_bottom = 1053.0
+texture_normal = ExtResource("14_1byp8")
+ignore_texture_size = true
+stretch_mode = 1

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=2 format=3 uid="uid://c4lkrer3yhyw4"]
+
+[ext_resource type="Script" uid="uid://dbb1up40oxbj4" path="res://Scripts/Missions/mission_def.gd" id="1_tyreb"]
+
+[resource]
+script = ExtResource("1_tyreb")
+title = "Goblin Raid"
+description = "Defend the helpless
+Defeat the goblins"
+base_work_time = 10.0
+base_travel_time = 10.0
+expiration_time = 10.0
+req_strength = 4
+req_constitution = 3
+req_dexterity = 2
+metadata/_custom_type_script = "uid://dbb1up40oxbj4"

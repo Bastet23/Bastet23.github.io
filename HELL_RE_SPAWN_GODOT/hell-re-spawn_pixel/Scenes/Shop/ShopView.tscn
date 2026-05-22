@@ -1,0 +1,326 @@
+[gd_scene load_steps=21 format=3 uid="uid://elqd38yu3voj"]
+
+[ext_resource type="Script" uid="uid://cjuv4gbmyijxx" path="res://Scripts/ShopScripts/ShopView.gd" id="1_e07oj"]
+[ext_resource type="Texture2D" uid="uid://ihdm4k8w406l" path="res://Sprites/Shop/shop_placeholder.jpg" id="1_ff7gl"]
+[ext_resource type="Texture2D" uid="uid://dboe660lc7arc" path="res://Sprites/Shop/Gemini_Generated_Image_865bym865bym865b-removebg-preview.png" id="2_8w88s"]
+[ext_resource type="Texture2D" uid="uid://eycllm35g0sy" path="res://Sprites/Shop/mammon-comic-character-removebg-preview.png" id="3_4b1ak"]
+[ext_resource type="Texture2D" uid="uid://dxmdw8bh4x05l" path="res://Sprites/Shop/images-removebg-preview.png" id="4_50bjo"]
+[ext_resource type="PackedScene" uid="uid://c7562l78sm4a8" path="res://Scenes/Cards/unit_display.tscn" id="5_ojofb"]
+[ext_resource type="Resource" uid="uid://deplx1yo7te2n" path="res://Resources/Unit_Resources/Pawn_Basic.tres" id="6_m0c8k"]
+[ext_resource type="Resource" uid="uid://depype3s0acvq" path="res://Resources/Unit_Resources/Bishop_Basic.tres" id="7_pe0ac"]
+[ext_resource type="Resource" uid="uid://cmsf7ajyoyu4p" path="res://Resources/Unit_Resources/Rook_Basic.tres" id="8_iv0qy"]
+[ext_resource type="Resource" uid="uid://clcnwh3tq08xl" path="res://Resources/Unit_Resources/Queen_Basic.tres" id="9_e07oj"]
+[ext_resource type="Resource" uid="uid://bexqrnirlnl15" path="res://Resources/Unit_Resources/Princess_basic.tres" id="10_1byp8"]
+[ext_resource type="Resource" uid="uid://cgq4fakwmjl5o" path="res://Resources/Unit_Resources/Jester_Basic.tres" id="11_yk4es"]
+[ext_resource type="Texture2D" uid="uid://b6twe6cqt5lqu" path="res://Sprites/Items/blue_circle1.png" id="12_m0c8k"]
+[ext_resource type="Texture2D" uid="uid://lw1gkpewnbqg" path="res://Sprites/Shop/Scarf_for_hand_container-removebg-preview.png" id="13_pe0ac"]
+[ext_resource type="Script" uid="uid://cdpbn5yunh10t" path="res://Scripts/Gameplay/stat_hexagon.gd" id="15_1byp8"]
+[ext_resource type="Texture2D" uid="uid://bbbeky1dk81xd" path="res://Sprites/Shop/wood_sign-removebg-preview.png" id="16_1byp8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pe0ac"]
+bg_color = Color(0.17659003, 0.14557916, 0.12647614, 1)
+border_width_left = 20
+border_width_top = 5
+border_width_right = 20
+border_width_bottom = 5
+border_color = Color(1.549, 1.431, 0.195, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iv0qy"]
+bg_color = Color(0.78039217, 0.39607844, 0.9490196, 1)
+border_width_left = 20
+border_width_top = 5
+border_width_right = 20
+border_width_bottom = 5
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e07oj"]
+bg_color = Color(0.9661308, 0.38228795, 0.32883316, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.370952, 0.04631741, 0.10914992, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yk4es"]
+bg_color = Color(0.9164331, 0.2508614, 0.3541803, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.370952, 0.04631741, 0.10914992, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="ShopView" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e07oj")
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.6156863)
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 1
+offset_right = 960.0
+offset_bottom = 511.0
+mouse_filter = 2
+texture = ExtResource("1_ff7gl")
+
+[node name="Caravan" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 47.0
+offset_right = 919.0
+offset_bottom = 444.0
+mouse_filter = 2
+texture = ExtResource("2_8w88s")
+
+[node name="ShopSlotsContainer" type="HBoxContainer" parent="Caravan"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 180.0
+offset_right = 1059.0
+offset_bottom = 420.0
+mouse_filter = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="ResetButton" type="Button" parent="Caravan"]
+self_modulate = Color(1.7492442, 0, 0.7928831, 1)
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = 115.0
+offset_right = 315.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 61
+text = "Reroll"
+
+[node name="Mammon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 272.0
+offset_right = 540.0
+offset_bottom = 848.0
+mouse_filter = 2
+texture = ExtResource("3_4b1ak")
+expand_mode = 1
+
+[node name="Item table" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 534.0
+offset_top = 538.0
+offset_right = 1995.0
+offset_bottom = 734.0
+texture = ExtResource("4_50bjo")
+
+[node name="TopBar" type="ColorRect" parent="."]
+self_modulate = Color(0.5137255, 0.50980395, 0, 0.81960785)
+layout_mode = 0
+offset_right = 286.0
+offset_bottom = 46.0
+mouse_filter = 2
+
+[node name="InfluenceBar" type="ProgressBar" parent="TopBar"]
+custom_minimum_size = Vector2(120, 15)
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 15.0
+size_flags_horizontal = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_pe0ac")
+theme_override_styles/fill = SubResource("StyleBoxFlat_iv0qy")
+show_percentage = false
+
+[node name="InfText" type="Label" parent="TopBar/InfluenceBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -230.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="GoldLabel" type="Label" parent="TopBar/InfluenceBar"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 20.0
+offset_right = 153.0
+offset_bottom = 70.0
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 13
+text = "Gold: 0"
+
+[node name="Seal" type="TextureRect" parent="TopBar/InfluenceBar"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 132.0
+offset_top = 1.0
+offset_right = 182.0
+offset_bottom = 51.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("12_m0c8k")
+
+[node name="Seal2" type="TextureRect" parent="TopBar/InfluenceBar"]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 0
+offset_left = 92.0
+offset_top = 2.0
+offset_right = 142.0
+offset_bottom = 52.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("12_m0c8k")
+
+[node name="Seal3" type="TextureRect" parent="TopBar/InfluenceBar"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 53.0
+offset_top = 3.0
+offset_right = 103.0
+offset_bottom = 53.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("12_m0c8k")
+
+[node name="Scarf_hand_container" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1600, 200)
+layout_mode = 0
+offset_left = 160.0
+offset_top = 815.0
+offset_right = 1760.0
+offset_bottom = 1079.0
+mouse_filter = 2
+texture = ExtResource("13_pe0ac")
+
+[node name="HandContainer" type="HBoxContainer" parent="Scarf_hand_container"]
+z_index = 2
+z_as_relative = false
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 1
+offset_top = 15.0
+offset_right = 1600.0
+offset_bottom = 215.0
+mouse_filter = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="UnitDisplay" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+unit_data = ExtResource("6_m0c8k")
+
+[node name="UnitDisplay2" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+
+[node name="UnitDisplay3" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+unit_data = ExtResource("7_pe0ac")
+
+[node name="UnitDisplay4" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+unit_data = ExtResource("8_iv0qy")
+
+[node name="UnitDisplay5" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+unit_data = ExtResource("9_e07oj")
+
+[node name="UnitDisplay6" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+unit_data = ExtResource("10_1byp8")
+
+[node name="UnitDisplay7" parent="Scarf_hand_container/HandContainer" instance=ExtResource("5_ojofb")]
+layout_mode = 2
+unit_data = ExtResource("11_yk4es")
+
+[node name="InteractionOverlay" type="Control" parent="."]
+visible = false
+z_index = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="ActionBtn" type="Button" parent="InteractionOverlay"]
+visible = false
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 0
+offset_left = 25.0
+offset_top = 140.0
+offset_right = 125.0
+offset_bottom = 244.0
+theme_override_constants/outline_size = 5
+theme_override_styles/normal = SubResource("StyleBoxFlat_e07oj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e07oj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e07oj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_e07oj")
+text = "
+
+
+Buy/Sell"
+
+[node name="DescriptionSign" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1068.0
+offset_top = 98.0
+offset_right = 1499.0
+offset_bottom = 605.0
+texture = ExtResource("16_1byp8")
+
+[node name="StatHexagon" type="Control" parent="DescriptionSign"]
+custom_minimum_size = Vector2(190, 190)
+anchors_preset = 0
+offset_left = 37.0
+offset_top = 101.0
+offset_right = 414.0
+offset_bottom = 344.0
+size_flags_horizontal = 4
+size_flags_vertical = 6
+mouse_filter = 2
+script = ExtResource("15_1byp8")
+web_color = Color(0, 0, 0, 1)
+bone_color = Color(0.8296818, 0.34051856, 0.2869117, 1)
+
+[node name="AbilityLabel2" type="RichTextLabel" parent="DescriptionSign"]
+z_index = 1
+custom_minimum_size = Vector2(190, 95)
+layout_mode = 0
+offset_left = 219.0
+offset_top = 352.0
+offset_right = 409.0
+offset_bottom = 493.0
+theme_override_constants/outline_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_yk4es")
+text = "Here there will be displayed the second ability"
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="AbilityLabel1" type="RichTextLabel" parent="DescriptionSign"]
+z_index = 1
+custom_minimum_size = Vector2(190, 95)
+layout_mode = 0
+offset_left = 29.0
+offset_top = 356.0
+offset_right = 219.0
+offset_bottom = 494.0
+theme_override_constants/outline_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_yk4es")
+text = "Here there will be displayed the first 
+ability"
+autowrap_mode = 2
+horizontal_alignment = 1

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="QueenData" load_steps=3 format=3 uid="uid://clcnwh3tq08xl"]
+
+[ext_resource type="Texture2D" uid="uid://ybwsotuyrh34" path="res://Sprites/Units/pawnx.jpeg" id="1_dj2q5"]
+[ext_resource type="Script" uid="uid://btno40tgdu0ud" path="res://Scripts/Units/queen_data.gd" id="1_sai8l"]
+
+[resource]
+script = ExtResource("1_sai8l")
+character_name = "Soul Queen"
+icon = ExtResource("1_dj2q5")
+unit_class = "Queen"
+strength = 2
+dexterity = 2
+constitution = 2
+intelligence = 2
+wisdom = 2
+charisma = 2
+metadata/_custom_type_script = "uid://ytl8uuunlg7c"

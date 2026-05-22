@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://b2ujfsspxtglp"]
+
+[ext_resource type="Script" uid="uid://bcwgph53cou7a" path="res://Scripts/Item_Prayer_Scripts/item_data.gd" id="1_fijut"]
+
+[resource]
+script = ExtResource("1_fijut")
+item_name = "Hellish Boots"
+description = "For when toes start Hurting
+(+1 Dex)"
+dexterity_bonus = 1
+metadata/_custom_type_script = "uid://bcwgph53cou7a"

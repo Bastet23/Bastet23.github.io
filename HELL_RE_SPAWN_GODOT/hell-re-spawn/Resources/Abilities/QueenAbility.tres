@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="QueenAbility" load_steps=2 format=3 uid="uid://ootle0uj8p12"]
+
+[ext_resource type="Script" uid="uid://c8g144q35b84y" path="res://Scripts/Abilities/QueenAbility.gd" id="1_qtm8w"]
+
+[resource]
+script = ExtResource("1_qtm8w")
+metadata/_custom_type_script = "uid://c8g144q35b84y"

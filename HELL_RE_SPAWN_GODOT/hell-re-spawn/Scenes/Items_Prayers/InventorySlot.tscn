@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://chtum15gjbtk5"]
+
+[ext_resource type="Texture2D" uid="uid://blxv1fmvt52y3" path="res://Sprites/Items/Pillow_Slot.png" id="1_lujod"]
+[ext_resource type="Script" uid="uid://dqlwkqk1p0xrj" path="res://Scripts/Item_Prayer_Scripts/InventorySlot.gd" id="1_ykjd3"]
+[ext_resource type="Texture2D" uid="uid://bwv2ic4tbdvab" path="res://Sprites/Items/sword.webp" id="2_ykjd3"]
+
+[node name="InventorySlot" type="Control"]
+custom_minimum_size = Vector2(276, 210)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ykjd3")
+
+[node name="pillowBg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_lujod")
+
+[node name="ItemIcon" type="TextureRect" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 107.0
+offset_top = 79.0
+offset_right = 157.0
+offset_bottom = 129.0
+texture = ExtResource("2_ykjd3")
+expand_mode = 1

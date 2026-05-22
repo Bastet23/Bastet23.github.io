@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="KnightData" load_steps=3 format=3 uid="uid://b3a4a2ecss24e"]
+
+[ext_resource type="Texture2D" uid="uid://ybwsotuyrh34" path="res://Sprites/Units/pawnx.jpeg" id="1_8lghu"]
+[ext_resource type="Script" uid="uid://14kkaoc7ugqc" path="res://Scripts/Units/knight_data.gd" id="2_8lghu"]
+
+[resource]
+script = ExtResource("2_8lghu")
+character_name = "Soul Knight"
+icon = ExtResource("1_8lghu")
+unit_class = "Knight"
+strength = 2
+dexterity = 3
+constitution = 2
+metadata/_custom_type_script = "uid://ytl8uuunlg7c"

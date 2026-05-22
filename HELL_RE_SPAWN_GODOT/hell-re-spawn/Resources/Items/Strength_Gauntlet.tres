@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://8fv2xovfxfpe"]
+
+[ext_resource type="Script" uid="uid://bcwgph53cou7a" path="res://Scripts/Item_Prayer_Scripts/item_data.gd" id="1_3h6n3"]
+
+[resource]
+script = ExtResource("1_3h6n3")
+item_name = "Hellish Gauntlets"
+description = "These gauntlets pack a Punch
+(+1 Str)"
+strength_bonus = 1
+metadata/_custom_type_script = "uid://bcwgph53cou7a"

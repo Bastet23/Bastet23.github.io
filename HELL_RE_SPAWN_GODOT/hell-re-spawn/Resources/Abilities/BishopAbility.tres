@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="BishopAbility" load_steps=2 format=3 uid="uid://duv3hbvucsg4w"]
+
+[ext_resource type="Script" uid="uid://p4b7jxdm8f3p" path="res://Scripts/Abilities/BishopAbility.gd" id="1_rtna2"]
+
+[resource]
+script = ExtResource("1_rtna2")
+metadata/_custom_type_script = "uid://p4b7jxdm8f3p"

@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://btkpyie6qxdbv"]
+
+[ext_resource type="Script" uid="uid://ch12tpdjjxakv" path="res://Scripts/Item_Prayer_Scripts/prayer_display.gd" id="1_mmgup"]
+[ext_resource type="Texture2D" uid="uid://bwv2ic4tbdvab" path="res://Sprites/Items/sword.webp" id="2_n0dfp"]
+[ext_resource type="Texture2D" uid="uid://dpvrlk60srsvb" path="res://Sprites/Items/Prayer_Paper.png" id="3_n0dfp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n0dfp"]
+bg_color = Color(0.9661308, 0.38228795, 0.32883316, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.370952, 0.04631741, 0.10914992, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="PrayerDisplay" type="Control"]
+custom_minimum_size = Vector2(186, 170)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 186.0
+offset_bottom = 170.0
+pivot_offset = Vector2(50, 50)
+script = ExtResource("1_mmgup")
+
+[node name="PrayerIcon" type="TextureRect" parent="."]
+z_index = 2
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+offset_left = 70.0
+offset_top = 90.0
+offset_right = 140.0
+offset_bottom = 160.0
+pivot_offset = Vector2(35, 35)
+mouse_filter = 2
+texture = ExtResource("2_n0dfp")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="DiamondBG" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+offset_right = 198.0
+offset_bottom = 222.0
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("3_n0dfp")
+stretch_mode = 2
+
+[node name="ActionBtn" type="Button" parent="."]
+z_index = -2
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 1
+offset_left = 66.0
+offset_top = 160.0
+offset_right = 166.0
+offset_bottom = 219.0
+theme_override_constants/outline_size = 5
+theme_override_styles/normal = SubResource("StyleBoxFlat_n0dfp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n0dfp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n0dfp")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_n0dfp")
+text = "
+Buy/Sell"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
